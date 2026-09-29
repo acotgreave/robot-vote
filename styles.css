@@ -214,25 +214,24 @@ main { max-width: 760px; margin: 0 auto; padding: 0 16px; }
 }
 @keyframes pop { from { transform: rotate(8deg) scale(0); } }
 .thanks { font-family: var(--display); font-size: 26px; margin: 0 0 10px; letter-spacing: 0.03em; }
-.bar {
-  display: flex; height: 56px; border: 3px solid var(--ink); border-radius: 12px; overflow: hidden;
+.hbars { display: grid; gap: 12px; }
+.hbar-label { margin: 0 0 4px; font-size: 15px; color: var(--ink-soft); line-height: 1.2; }
+.hbar-label b { font-family: var(--display); font-weight: 400; font-size: 21px; letter-spacing: 0.04em; margin-right: 4px; }
+.hbar--red .hbar-label b { color: var(--red); }
+.hbar--blue .hbar-label b { color: var(--teal); }
+.hbar.is-mine .hbar-label b::after { content: "\00a0\2605"; color: var(--ink); }
+/* Fills are sized against (track - 96px), so the leader still leaves room for its value label. */
+.hbar-track { display: flex; align-items: center; gap: 8px; }
+.hbar-fill { flex: none; }
+.hbar-fill {
+  height: 40px; width: 0; min-width: 6px; border: 3px solid var(--ink); border-radius: 0 10px 10px 0;
+  box-shadow: 3px 3px 0 var(--ink); transition: width 0.9s cubic-bezier(.3,1.2,.4,1);
 }
-.bar > div {
-  display: flex; align-items: center; min-width: 0;
-  font-family: var(--display); font-size: 28px; color: #fff; letter-spacing: 0.03em;
-  transition: flex-basis 0.9s cubic-bezier(.3,1.2,.4,1);
-  flex: 0 0 50%; white-space: nowrap; overflow: hidden;
-}
-.bar-red { background: var(--red); justify-content: flex-start; padding-left: 12px; border-right: 3px solid var(--ink); }
-.bar-blue { background: var(--teal); justify-content: flex-end; padding-right: 12px; }
-.bar-legend {
-  display: flex; justify-content: space-between; gap: 8px;
-  margin-top: 8px; font-size: 15px; font-weight: 700;
-}
-.bar-legend em { font-style: normal; color: var(--ink-soft); font-weight: 600; }
-.dot { display: inline-block; width: 11px; height: 11px; border-radius: 3px; margin: 0 6px; vertical-align: 0; }
-.dot--red { background: var(--red); margin-left: 0; }
-.dot--blue { background: var(--teal); margin-right: 0; }
+.hbar--red .hbar-fill { background: var(--red); }
+.hbar--blue .hbar-fill { background: var(--teal); }
+.hbar-val { white-space: nowrap; }
+.hbar-val b { font-family: var(--display); font-weight: 400; font-size: 30px; line-height: 1; }
+.hbar-val em { font-style: normal; font-size: 14px; color: var(--ink-soft); font-weight: 600; }
 .tally { margin: 10px 0 0; font-size: 14px; color: var(--ink-soft); }
 
 /* ---------- the post-vote call to action ---------- */
@@ -342,16 +341,15 @@ main { max-width: 760px; margin: 0 auto; padding: 0 16px; }
 .feature-label { font-family: var(--display); color: var(--yellow); font-size: 18px; letter-spacing: 0.05em; }
 .feature strong { display: block; font-size: 21px; line-height: 1.2; margin: 4px 0 6px; }
 .feature-sub { font-size: 15px; opacity: 0.92; }
-.links { list-style: none; padding: 0; margin: 0; }
-.links li + li { border-top: 2px dashed rgba(0,0,0,.15); }
-.links a { display: block; padding: 12px 2px; text-decoration: none; min-height: 48px; }
-.links b { display: block; font-size: 17px; }
-.links span { display: block; color: var(--ink-soft); font-size: 15px; }
-.links a:hover b { text-decoration: underline; }
 
 /* ---------- about ---------- */
 .about { text-align: left; }
-.about-photo { width: 100%; height: auto; margin: 8px 0 14px; }
+.about-photo {
+  width: 100%; height: auto; margin: 8px 0 14px; border: 3px solid var(--ink); border-radius: 12px;
+  /* The photo is a wide panorama: on phones, crop in on the stage and the big screens. */
+  aspect-ratio: 2 / 1; object-fit: cover; object-position: 44% 50%;
+}
+@media (min-width: 640px) { .about-photo { aspect-ratio: 1042 / 241; } }
 .about h2 { font-size: clamp(26px, 7vw, 38px); }
 .creds { padding-left: 20px; margin: 14px 0 18px; }
 .creds li { margin: 6px 0; font-size: 16px; }

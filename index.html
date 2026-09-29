@@ -72,13 +72,15 @@
     <div class="results" id="results" hidden aria-live="polite">
       <div class="kapow" id="kapow" aria-hidden="true">KAPOW!</div>
       <p class="thanks" id="thanks">Vote counted!</p>
-      <div class="bar" role="img" id="bar" aria-label="">
-        <div class="bar-red" id="barRed"><span id="pctRed">–</span></div>
-        <div class="bar-blue" id="barBlue"><span id="pctBlue">–</span></div>
-      </div>
-      <div class="bar-legend">
-        <span><b class="dot dot--red"></b>Too dangerous <em id="nRed">–</em></span>
-        <span>Amazing <em id="nBlue">–</em><b class="dot dot--blue"></b></span>
+      <div class="hbars" role="img" id="bar" aria-label="">
+        <div class="hbar hbar--red" id="rowRed">
+          <p class="hbar-label"><b>Red Rocker</b> AI is too dangerous</p>
+          <div class="hbar-track"><div class="hbar-fill" id="barRed"></div><span class="hbar-val"><b id="pctRed">–</b> <em id="nRed"></em></span></div>
+        </div>
+        <div class="hbar hbar--blue" id="rowBlue">
+          <p class="hbar-label"><b>Blue Bomber</b> This AI tech is amazing</p>
+          <div class="hbar-track"><div class="hbar-fill" id="barBlue"></div><span class="hbar-val"><b id="pctBlue">–</b> <em id="nBlue"></em></span></div>
+        </div>
       </div>
       <p class="tally" id="tally"></p>
 
@@ -123,22 +125,14 @@
     <a class="feature" href="https://howtospeakdata.substack.com/p/why-human-insight-is-more-important?utm_source=robot&utm_medium=keynote" target="_blank" rel="noopener">
       <span class="feature-label">The keynote write-up</span>
       <strong>Why human insight is more important than ever in the age of AI</strong>
-      <span class="feature-sub">Every story, chart and source from the talk, in one place &rarr;</span>
+      <span class="feature-sub">Every story, chart, book and link from the talk, all in one place. Read it on Substack &rarr;</span>
     </a>
-    <ul class="links">
-      <li><a href="https://www.oneusefulthing.org/p/making-ai-work-leadership-lab-and" target="_blank" rel="noopener"><b>Leadership, Lab &amp; Crowd</b><span>Ethan Mollick on making AI work in organisations</span></a></li>
-      <li><a href="https://dtdbook.com/AI_Risk_Amanda" target="_blank" rel="noopener"><b>AI risk-of-harm framework</b><span>Audience, scale and sources: questions to ask before you ship</span></a></li>
-      <li><a href="https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow" target="_blank" rel="noopener"><b>Thinking, Fast and Slow</b><span>Daniel Kahneman: write your prompts in System 2</span></a></li>
-      <li><a href="https://www.penguinrandomhouse.com/books/743569/empire-of-ai-by-karen-hao/" target="_blank" rel="noopener"><b>Empire of AI</b><span>Karen Hao's book on who holds the power</span></a></li>
-      <li><a href="https://www.gatesnotes.com/a-turbulent-ai-era-and-critical-choices-to-make" target="_blank" rel="noopener"><b>A turbulent AI era</b><span>Bill Gates's manifesto. What's yours?</span></a></li>
-      <li><a href="http://addtoplaylist.howtospeakdata.com/" target="_blank" rel="noopener"><b>Add To Playlist</b><span>My vibe-coding epiphany, live</span></a></li>
-    </ul>
   </section>
 
   <!-- ============ ABOUT ANDY ============ -->
   <section class="panel about" id="about" aria-labelledby="aboutTitle">
     <p class="kicker kicker--dark">So, who is asking?</p>
-    <img class="about-photo" src="assets/andy-and-the-robots.webp" alt="Andy Cotgreave between the Red Rocker and Blue Bomber robots" width="1200" height="716" loading="lazy">
+    <img class="about-photo" src="assets/andy-keynote.jpg" alt="Andy Cotgreave on stage giving a keynote at Data Innovation Summit 2026" width="1042" height="241" loading="lazy">
     <h2 id="aboutTitle">I'm Andy Cotgreave. I've spent 20 years helping people enjoy, not endure, data.</h2>
     <ul class="creds">
       <li>Co-author of <em>The Big Book of Dashboards</em> and <em>Dashboards That Deliver</em> (Wiley, 2025)</li>
@@ -162,7 +156,7 @@
 </main>
 
 <footer class="foot">
-  <p>Your vote is stored with the time and a rough location (country and city) worked out from your connection. No names, emails or IP addresses are kept. <a href="https://github.com/acotgreave/robot-vote/blob/main/data/votes.csv">See all the votes</a>.</p>
+  <p>Your vote is stored with the time and a rough location (country and city) worked out from your connection. No names, emails or IP addresses are kept. <a href="https://github.com/acotgreave/robot-vote/blob/main/data/votes.csv">See all the votes</a>. This site was created with Claude Code.</p>
   <p>&copy; How To Speak Data</p>
 </footer>
 

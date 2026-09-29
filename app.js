@@ -141,13 +141,17 @@
     var red = total ? Math.round((r.red / total) * 100) : 50, blue = 100 - red;
 
     requestAnimationFrame(function () {
-      $("barRed").style.flexBasis = red + "%";
-      $("barBlue").style.flexBasis = blue + "%";
+      // Bars are scaled so the leader fills the track (leaving room for its label).
+      var top = Math.max(red, blue) || 1;
+      $("barRed").style.width = "calc((100% - 96px) * " + red / top + ")";
+      $("barBlue").style.width = "calc((100% - 96px) * " + blue / top + ")";
     });
-    $("pctRed").textContent = red >= 12 ? red + "%" : "";
-    $("pctBlue").textContent = blue >= 12 ? blue + "%" : "";
+    $("pctRed").textContent = red + "%";
+    $("pctBlue").textContent = blue + "%";
     $("nRed").textContent = "(" + r.red.toLocaleString() + ")";
     $("nBlue").textContent = "(" + r.blue.toLocaleString() + ")";
+    $("rowRed").classList.toggle("is-mine", mine === "red");
+    $("rowBlue").classList.toggle("is-mine", mine === "blue");
     $("bar").setAttribute("aria-label", red + "% say AI is too dangerous, " + blue + "% say this AI tech is amazing");
 
     // Your robot knocks the other one's block off.

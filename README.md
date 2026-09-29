@@ -64,7 +64,7 @@ To test the Worker itself without touching live data: `npx wrangler dev` in `wor
 |---|---|
 | `index.html`, `styles.css`, `app.js` | The page |
 | `config.js` | The Worker address |
-| `assets/` | Robot cut-outs, Andy photo, social share image, favicon |
+| `assets/` | Robot cut-outs, keynote photo, social share image, favicon |
 | `data/votes.csv` | Vote log (kept up to date by the GitHub Action) |
 | `worker/` | Cloudflare Worker code and config |
 | `.github/workflows/sync-votes.yml` | Copies votes into `data/votes.csv` |
