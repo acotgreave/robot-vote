@@ -6,7 +6,7 @@ compatibility_date = "2026-09-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "robot-votes"
-database_id = "PASTE-YOUR-D1-DATABASE-ID-HERE"
+database_id = "64eb9877-4b75-4182-922a-1f405ed015d6"
 
 [vars]
 # Sites allowed to send votes. localhost is there so the page can be tested locally.

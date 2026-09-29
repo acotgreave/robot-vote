@@ -155,7 +155,12 @@
       f.classList.toggle("knocked", r[me] < r[other]);
     });
 
-    var line = r.total.toLocaleString() + " votes" + (r.countries > 1 ? " from " + r.countries + " countries" : "") + " so far.";
+    var line = "";
+    if (r.red !== r.blue) {
+      var win = r.red > r.blue ? "red" : "blue";
+      line = NAMES[win] + " has knocked " + NAMES[win === "red" ? "blue" : "red"] + "'s block off! ";
+    }
+    line += r.total.toLocaleString() + " votes" + (r.countries > 1 ? " from " + r.countries + " countries" : "") + " so far.";
     if (mine) {
       var other = mine === "red" ? "blue" : "red";
       if (r[mine] > r[other]) line += " " + NAMES[mine] + " is winning. You're with the majority.";
@@ -182,7 +187,7 @@
       if (counts && !TEST) { counts = Object.assign({}, counts); counts[robot] += 1; counts.total += 1; }
       justVoted = true;
       render(robot);
-      setTimeout(function () { resultsEl.scrollIntoView({ behavior: "smooth", block: "start" }); }, 300);
+      setTimeout(function () { resultsEl.scrollIntoView({ behavior: "smooth", block: "start" }); }, 1700); // let the K.O. play first
       flushPending();
     });
   });

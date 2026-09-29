@@ -51,7 +51,12 @@ npx wrangler deploy                     # prints the https://robot-vote.<you>.wo
 
 Then put that address in `config.js` and push. The Worker creates its table and seed votes on first use.
 
-To test locally: `npx wrangler dev` in `worker/` (uses a local database), and serve the site on `http://localhost:5173`.
+## Testing locally
+
+Serve the site on `http://localhost:5173` (e.g. `npx http-server . -p 5173 -c-1`) and open `http://localhost:5173/?test`.
+Use **Reset my vote** in the striped banner to vote again. Local test votes go to the live counter as `source = test`, so they never affect the tally.
+
+To test the Worker itself without touching live data: `npx wrangler dev` in `worker/` (local database), then point `config.js` at `http://localhost:8787`.
 
 ## Files
 
