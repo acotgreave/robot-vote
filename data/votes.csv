@@ -106,3 +106,17 @@ vote_id,timestamp_utc,robot,robot_label,country,region,city,event,source
 105,2026-09-29T09:01:44.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
 106,2026-09-29T09:01:45.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
 107,2026-09-29T09:01:46.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+109,2026-09-29T11:21:43.989Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Thame,,test
+110,2026-09-29T11:22:21.639Z,red,Red Rocker (AI is too dangerous),GB,England,Thame,,test
+111,2026-09-29T11:22:26.906Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Thame,,test
+112,2026-09-29T11:23:54.174Z,red,Red Rocker (AI is too dangerous),GB,England,Thame,,test
+113,2026-09-29T11:24:09.537Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Thame,,test
+114,2026-09-29T11:28:27.430Z,red,Red Rocker (AI is too dangerous),GB,England,Thame,,web
+116,2026-09-29T12:01:51.613Z,red,Red Rocker (AI is too dangerous),GB,England,Thame,,web
+117,2026-09-29T12:02:44.612Z,red,Red Rocker (AI is too dangerous),GB,England,Thame,,web
+118,2026-09-29T12:05:42.090Z,blue,Blue Bomber (This AI tech is amazing),CA,Nova Scotia,Halifax,,web
+119,2026-09-29T12:06:01.365Z,red,Red Rocker (AI is too dangerous),US,Georgia,Columbus,,web
+120,2026-09-29T12:22:30.723Z,red,Red Rocker (AI is too dangerous),GB,England,Rochdale,,web
+121,2026-09-29T12:30:31.617Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Thame,,web
+122,2026-09-29T14:07:47.708Z,blue,Blue Bomber (This AI tech is amazing),SE,Stockholm,Stockholm,,web
+123,2026-09-29T14:39:24.297Z,red,Red Rocker (AI is too dangerous),US,New York,Ossining,,web
