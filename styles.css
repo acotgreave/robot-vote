@@ -295,24 +295,6 @@ main { max-width: 760px; margin: 0 auto; padding: 0 16px; }
   box-shadow: 6px 6px 0 var(--ink);
 }
 .panel h2 { font-size: clamp(30px, 8.5vw, 44px); margin-bottom: 8px; }
-.round {
-  display: inline-block; font-size: 0.55em; vertical-align: 0.25em;
-  background: var(--red); color: var(--yellow); padding: 3px 8px 1px; border-radius: 6px; margin-right: 4px;
-}
-.lede { margin: 0 0 16px; color: var(--ink-soft); font-size: 17px; }
-
-.corners { display: grid; gap: 16px; }
-.corner {
-  position: relative; border: 3px solid var(--ink); border-radius: 14px; padding: 18px 16px 16px;
-}
-.corner h3 { font-size: 27px; margin: 6px 0 6px; }
-.corner p { margin: 0 0 14px; font-size: 16px; }
-.corner--substack { background: #fff1e8; }
-.corner--linkedin { background: #eaf3fc; }
-.tag {
-  display: inline-block; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em;
-  padding: 3px 9px; border-radius: 999px; background: var(--ink); color: #fff;
-}
 .substack-embed {
   border-radius: 10px; overflow: hidden; background: #fff; border: 2px solid rgba(0,0,0,.12);
   margin-bottom: 12px;
@@ -361,6 +343,8 @@ main { max-width: 760px; margin: 0 auto; padding: 0 16px; }
 .asks p { margin: 4px 0; }
 .asks p:nth-child(odd) { color: var(--yellow); }
 .cta-row { display: grid; gap: 12px; margin: 16px 0 8px; }
+.newsletter { margin: 20px 0 8px; }
+.newsletter-title { font-family: var(--display); font-size: 24px; letter-spacing: 0.03em; margin: 0 0 8px; }
 .site-link { text-align: center; margin: 12px 0 0; font-weight: 800; }
 
 .foot { max-width: 760px; margin: 0 auto; padding: 8px 16px calc(28px + env(safe-area-inset-bottom)); font-size: 13px; color: var(--ink-soft); text-align: center; }
@@ -371,8 +355,8 @@ main { max-width: 760px; margin: 0 auto; padding: 0 16px; }
   .ring { padding-top: 36px; }
   .fighters { gap: 18px; margin: 0; }
   .bot { height: min(46vh, 360px); }
-  .corners { grid-template-columns: 1.25fr 1fr; align-items: start; }
-  .cta-row { grid-template-columns: 1fr 1fr; }
+  .cta-row { grid-template-columns: repeat(3, 1fr); }
+  .cta-row .btn { font-size: 20px; padding-left: 10px; padding-right: 10px; }
   .panel { padding: 28px; }
 }
 

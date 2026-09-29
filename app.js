@@ -193,14 +193,17 @@
     });
   });
 
-  // ---------- sticky CTA: always there after voting, except while the big CTA is on screen ----------
+  // ---------- sticky CTA: always there after voting, except while other follow buttons are on screen ----------
   var sticky = $("sticky");
   var stickyClosed = false;
   $("stickyClose").addEventListener("click", function () { stickyClosed = true; updateSticky(); });
+  function onScreen(el) {
+    var r = el.getBoundingClientRect();
+    return r.height > 0 && r.bottom > 0 && r.top < innerHeight;
+  }
   function updateSticky() {
-    var r = $("resultCta").getBoundingClientRect();
-    var ctaOnScreen = !resultsEl.hidden && r.bottom > 0 && r.top < innerHeight;
-    sticky.classList.toggle("show", document.body.classList.contains("has-voted") && !stickyClosed && !ctaOnScreen);
+    var dupes = (!resultsEl.hidden && onScreen($("resultCta"))) || onScreen($("aboutCtas")) || onScreen($("newsletter"));
+    sticky.classList.toggle("show", document.body.classList.contains("has-voted") && !stickyClosed && !dupes);
   }
   var ticking = false;
   function onScroll() {
