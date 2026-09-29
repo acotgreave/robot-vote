@@ -123,6 +123,7 @@
     fighters.forEach(function (f) {
       var isPick = f.getAttribute("data-robot") === robot;
       f.classList.toggle("is-pick", isPick);
+      f.classList.toggle("knocked", !isPick); // your robot knocks the other one's block off
       f.setAttribute("aria-disabled", "true");
       f.querySelector(".vote-btn").textContent = isPick ? "Your pick" : "";
     });
@@ -149,26 +150,22 @@
     $("nBlue").textContent = "(" + r.blue.toLocaleString() + ")";
     $("bar").setAttribute("aria-label", red + "% say AI is too dangerous, " + blue + "% say this AI tech is amazing");
 
-    // The robot with fewer votes gets its block knocked off.
+    // Your robot knocks the other one's block off.
     fighters.forEach(function (f) {
-      var me = f.getAttribute("data-robot"), other = me === "red" ? "blue" : "red";
-      f.classList.toggle("knocked", r[me] < r[other]);
+      f.classList.toggle("knocked", !!mine && f.getAttribute("data-robot") !== mine);
     });
 
-    var line = "";
-    if (r.red !== r.blue) {
-      var win = r.red > r.blue ? "red" : "blue";
-      line = NAMES[win] + " has knocked " + NAMES[win === "red" ? "blue" : "red"] + "'s block off! ";
-    }
+    var line = mine ? "Your " + NAMES[mine] + " knocked " + NAMES[mine === "red" ? "blue" : "red"] + "'s block off! " : "";
     line += r.total.toLocaleString() + " votes" + (r.countries > 1 ? " from " + r.countries + " countries" : "") + " so far.";
     if (mine) {
       var other = mine === "red" ? "blue" : "red";
-      if (r[mine] > r[other]) line += " " + NAMES[mine] + " is winning. You're with the majority.";
-      else if (r[mine] < r[other]) line += " " + NAMES[mine] + " is on the ropes. You're a contrarian!";
-      else line += " It's a dead heat!";
+      if (r[mine] > r[other]) line += " And " + NAMES[mine] + " is winning overall. You're with the majority.";
+      else if (r[mine] < r[other]) line += " But overall " + NAMES[mine] + " is losing. You're a contrarian!";
+      else line += " Overall it's a dead heat!";
     }
     if (DEMO) line += " (Demo mode: counter not connected yet.)";
     $("tally").textContent = line;
+    onScroll();
   }
 
   // ---------- voting ----------
@@ -192,23 +189,23 @@
     });
   });
 
-  // ---------- sticky CTA: appears once the in-card CTA has scrolled away ----------
+  // ---------- sticky CTA: always there after voting, except while the big CTA is on screen ----------
   var sticky = $("sticky");
   var stickyClosed = false;
-  $("stickyClose").addEventListener("click", function () { stickyClosed = true; sticky.classList.remove("show"); });
-  function inView(el) { var r = el.getBoundingClientRect(); return r.bottom > 0 && r.top < innerHeight; }
+  $("stickyClose").addEventListener("click", function () { stickyClosed = true; updateSticky(); });
+  function updateSticky() {
+    var r = $("resultCta").getBoundingClientRect();
+    var ctaOnScreen = !resultsEl.hidden && r.bottom > 0 && r.top < innerHeight;
+    sticky.classList.toggle("show", document.body.classList.contains("has-voted") && !stickyClosed && !ctaOnScreen);
+  }
   var ticking = false;
-  window.addEventListener("scroll", function () {
+  function onScroll() {
     if (ticking) return;
     ticking = true;
-    requestAnimationFrame(function () {
-      ticking = false;
-      var cta = $("resultCta");
-      var show = document.body.classList.contains("has-voted") && !stickyClosed &&
-        cta.getBoundingClientRect().bottom < 0 && !inView($("next")) && !inView($("about"));
-      sticky.classList.toggle("show", show);
-    });
-  }, { passive: true });
+    requestAnimationFrame(function () { ticking = false; updateSticky(); });
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
 
   // ---------- test mode ----------
   if (TEST) {
