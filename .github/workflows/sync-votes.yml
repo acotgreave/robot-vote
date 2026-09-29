@@ -1,0 +1,36 @@
+# Copies the live vote list from the Cloudflare Worker into data/votes.csv.
+# Runs every 30 minutes (GitHub may start it a few minutes late) and can be
+# run by hand from the Actions tab: "Sync votes" -> "Run workflow".
+name: Sync votes
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download votes.csv from the Worker
+        run: |
+          api=$(grep -oE 'https://[^"]+' config.js | head -1)
+          if [ -z "$api" ] || echo "$api" | grep -q YOUR-SUBDOMAIN; then
+            echo "Worker address not set in config.js yet; nothing to do."; exit 0
+          fi
+          curl -fsS --retry 3 "$api/votes.csv" -o data/votes.csv
+
+      - name: Commit if anything changed
+        run: |
+          git diff --quiet -- data/votes.csv && { echo "No new votes."; exit 0; }
+          n=$(($(wc -l < data/votes.csv) - 1))
+          git config user.name "robot-vote-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/votes.csv
+          git commit -m "Votes update: $n votes"
+          git push

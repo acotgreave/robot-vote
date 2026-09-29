@@ -1,0 +1,108 @@
+vote_id,timestamp_utc,robot,robot_label,country,region,city,event,source
+1,2026-09-29T09:00:00.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+2,2026-09-29T09:00:01.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+3,2026-09-29T09:00:02.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+4,2026-09-29T09:00:03.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+5,2026-09-29T09:00:04.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+6,2026-09-29T09:00:05.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+7,2026-09-29T09:00:06.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+8,2026-09-29T09:00:07.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+9,2026-09-29T09:00:08.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+10,2026-09-29T09:00:09.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+11,2026-09-29T09:00:10.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+12,2026-09-29T09:00:11.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+13,2026-09-29T09:00:12.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+14,2026-09-29T09:00:13.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+15,2026-09-29T09:00:14.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+16,2026-09-29T09:00:15.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+17,2026-09-29T09:00:16.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+18,2026-09-29T09:00:17.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+19,2026-09-29T09:00:18.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+20,2026-09-29T09:00:19.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+21,2026-09-29T09:00:20.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+22,2026-09-29T09:00:21.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+23,2026-09-29T09:00:22.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+24,2026-09-29T09:00:23.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+25,2026-09-29T09:00:24.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+26,2026-09-29T09:00:25.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+27,2026-09-29T09:00:26.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+28,2026-09-29T09:00:27.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+29,2026-09-29T09:00:28.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+30,2026-09-29T09:00:29.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+31,2026-09-29T09:00:30.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+32,2026-09-29T09:00:31.000Z,blue,Blue Bomber (This AI tech is amazing),,,,,seed
+33,2026-09-29T09:00:32.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+34,2026-09-29T09:00:33.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+35,2026-09-29T09:00:34.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+36,2026-09-29T09:00:35.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+37,2026-09-29T09:00:36.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+38,2026-09-29T09:00:37.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+39,2026-09-29T09:00:38.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+40,2026-09-29T09:00:39.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+41,2026-09-29T09:00:40.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+42,2026-09-29T09:00:41.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+43,2026-09-29T09:00:42.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+44,2026-09-29T09:00:43.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+45,2026-09-29T09:00:44.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+46,2026-09-29T09:00:45.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+47,2026-09-29T09:00:46.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+48,2026-09-29T09:00:47.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+49,2026-09-29T09:00:48.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+50,2026-09-29T09:00:49.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+51,2026-09-29T09:00:50.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+52,2026-09-29T09:00:51.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+53,2026-09-29T09:00:52.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+54,2026-09-29T09:00:53.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+55,2026-09-29T09:00:54.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+56,2026-09-29T09:00:55.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+57,2026-09-29T09:00:56.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+58,2026-09-29T09:00:57.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+59,2026-09-29T09:00:58.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+60,2026-09-29T09:00:59.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+61,2026-09-29T09:01:00.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+62,2026-09-29T09:01:01.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+63,2026-09-29T09:01:02.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+64,2026-09-29T09:01:03.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+65,2026-09-29T09:01:04.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+66,2026-09-29T09:01:05.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+67,2026-09-29T09:01:06.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+68,2026-09-29T09:01:07.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+69,2026-09-29T09:01:08.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+70,2026-09-29T09:01:09.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+71,2026-09-29T09:01:10.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+72,2026-09-29T09:01:11.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+73,2026-09-29T09:01:12.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+74,2026-09-29T09:01:13.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+75,2026-09-29T09:01:14.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+76,2026-09-29T09:01:15.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+77,2026-09-29T09:01:16.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+78,2026-09-29T09:01:17.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+79,2026-09-29T09:01:18.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+80,2026-09-29T09:01:19.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+81,2026-09-29T09:01:20.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+82,2026-09-29T09:01:21.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+83,2026-09-29T09:01:22.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+84,2026-09-29T09:01:23.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+85,2026-09-29T09:01:24.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+86,2026-09-29T09:01:25.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+87,2026-09-29T09:01:26.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+88,2026-09-29T09:01:27.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+89,2026-09-29T09:01:28.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+90,2026-09-29T09:01:29.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+91,2026-09-29T09:01:30.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+92,2026-09-29T09:01:31.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+93,2026-09-29T09:01:32.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+94,2026-09-29T09:01:33.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+95,2026-09-29T09:01:34.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+96,2026-09-29T09:01:35.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+97,2026-09-29T09:01:36.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+98,2026-09-29T09:01:37.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+99,2026-09-29T09:01:38.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+100,2026-09-29T09:01:39.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+101,2026-09-29T09:01:40.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+102,2026-09-29T09:01:41.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+103,2026-09-29T09:01:42.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+104,2026-09-29T09:01:43.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+105,2026-09-29T09:01:44.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+106,2026-09-29T09:01:45.000Z,red,Red Rocker (AI is too dangerous),,,,,seed
+107,2026-09-29T09:01:46.000Z,red,Red Rocker (AI is too dangerous),,,,,seed

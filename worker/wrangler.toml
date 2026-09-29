@@ -1,0 +1,13 @@
+# Deploy with:  npx wrangler deploy   (run from this folder)
+name = "robot-vote"
+main = "worker.js"
+compatibility_date = "2026-09-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "robot-votes"
+database_id = "PASTE-YOUR-D1-DATABASE-ID-HERE"
+
+[vars]
+# Sites allowed to send votes. localhost is there so the page can be tested locally.
+ALLOWED_ORIGINS = "https://robot.howtospeakdata.com,https://acotgreave.github.io,http://localhost:5173"

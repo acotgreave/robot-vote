@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Which Robot Is Winning? | How To Speak Data</title>
+  <meta name="description" content="Andy Cotgreave wants to know: is AI amazing, or too dangerous? Cast your vote and see how the room called it.">
+  <meta name="theme-color" content="#c00000">
+  <meta property="og:title" content="Which robot is winning the battle in your head?">
+  <meta property="og:description" content="Blue Bomber: this AI tech is amazing. Red Rocker: AI is too dangerous. Cast your vote.">
+  <meta property="og:image" content="https://robot.howtospeakdata.com/assets/og-image.jpg">
+  <meta property="og:url" content="https://robot.howtospeakdata.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="testbar" id="testbar" hidden>
+  <span><b>Test mode.</b> Your votes are saved as tests and never counted.</span>
+  <button type="button" id="resetVote">Reset my vote</button>
+  <a href="?test=off">Exit</a>
+</div>
+
+<header class="topbar">
+  <a class="brand" href="https://howtospeakdata.com">How To Speak Data</a>
+</header>
+
+<main>
+  <!-- ============ THE FIGHT ============ -->
+  <section class="ring" id="vote" aria-labelledby="q">
+    <p class="kicker">Andy Cotgreave wants to know&hellip;</p>
+    <h1 id="q">Which robot is winning the battle in your head?</h1>
+
+    <div class="fighters" id="fighters">
+      <button class="fighter fighter--red" data-robot="red" aria-label="Vote Red Rocker: AI is too dangerous">
+        <span class="name">Red Rocker</span>
+        <span class="bubble bubble--red">AI is too dangerous</span>
+        <span class="bot" aria-hidden="true">
+          <img class="bot-full" src="assets/red-robot.webp" alt="" width="318" height="583">
+          <img class="bot-body" src="assets/red-body.webp" alt="" width="318" height="583">
+          <img class="bot-head" src="assets/red-head.webp" alt="" width="318" height="583">
+        </span>
+        <span class="vote-btn">Vote red</span>
+      </button>
+
+      <span class="vs" aria-hidden="true">VS</span>
+
+      <button class="fighter fighter--blue" data-robot="blue" aria-label="Vote Blue Bomber: This AI tech is amazing">
+        <span class="name">Blue Bomber</span>
+        <span class="bubble bubble--blue">This AI tech is amazing</span>
+        <span class="bot" aria-hidden="true">
+          <img class="bot-full" src="assets/blue-robot.webp" alt="" width="310" height="566">
+          <img class="bot-body" src="assets/blue-body.webp" alt="" width="310" height="566">
+          <img class="bot-head" src="assets/blue-head.webp" alt="" width="310" height="566">
+        </span>
+        <span class="vote-btn">Vote blue</span>
+      </button>
+    </div>
+
+    <p class="hint" id="hint">Tap a robot to vote. One vote each, no sign-up needed.</p>
+
+    <!-- Results (revealed after voting) -->
+    <div class="results" id="results" hidden aria-live="polite">
+      <div class="kapow" id="kapow" aria-hidden="true">KAPOW!</div>
+      <p class="thanks" id="thanks">Vote counted!</p>
+      <div class="bar" role="img" id="bar" aria-label="">
+        <div class="bar-red" id="barRed"><span id="pctRed">–</span></div>
+        <div class="bar-blue" id="barBlue"><span id="pctBlue">–</span></div>
+      </div>
+      <div class="bar-legend">
+        <span><b class="dot dot--red"></b>Too dangerous <em id="nRed">–</em></span>
+        <span>Amazing <em id="nBlue">–</em><b class="dot dot--blue"></b></span>
+      </div>
+      <p class="tally" id="tally"></p>
+
+      <div class="result-cta" id="resultCta">
+        <p class="result-cta-kicker">Round 2: don't leave the ring!</p>
+        <p class="result-cta-lede">Get the write-up of this talk, with every link and source, free in your inbox.</p>
+        <a class="btn btn--substack btn--big" href="https://howtospeakdata.substack.com/subscribe?utm_source=robot&amp;utm_medium=keynote&amp;utm_content=after-vote" target="_blank" rel="noopener">Subscribe on Substack</a>
+        <p class="or"><span>or</span></p>
+        <a class="btn btn--linkedin" href="https://www.linkedin.com/in/acotgreave/" target="_blank" rel="noopener">Follow Andy on LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEXT ROUND ============ -->
+  <section class="panel next" id="next" aria-labelledby="nextTitle">
+    <h2 id="nextTitle">Keep the fight going</h2>
+    <p class="lede">The battle between these two robots doesn't end when the keynote does. Pick your corner:</p>
+
+    <div class="corners">
+      <article class="corner corner--substack">
+        <span class="tag">Best for the full story</span>
+        <h3>The How To Speak Data newsletter</h3>
+        <p>The full write-up of this keynote, every link I mentioned, and new thinking on AI, data and staying human. Free, straight to your inbox.</p>
+        <div class="substack-embed">
+          <iframe src="https://howtospeakdata.substack.com/embed" title="Subscribe to How To Speak Data on Substack" loading="lazy" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <a class="btn btn--substack" href="https://howtospeakdata.substack.com/subscribe?utm_source=robot&utm_medium=keynote" target="_blank" rel="noopener">Subscribe on Substack</a>
+      </article>
+
+      <article class="corner corner--linkedin">
+        <span class="tag">Quickest</span>
+        <h3>Follow Andy on LinkedIn</h3>
+        <p>Short, regular posts on AI and data, plus news of The AI Analyst? live shows. One tap and you're in.</p>
+        <a class="btn btn--linkedin" href="https://www.linkedin.com/in/acotgreave/" target="_blank" rel="noopener">Follow on LinkedIn</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ FURTHER READING ============ -->
+  <section class="panel reading" id="reading" aria-labelledby="readTitle">
+    <h2 id="readTitle">Further reading</h2>
+    <a class="feature" href="https://howtospeakdata.substack.com/p/why-human-insight-is-more-important?utm_source=robot&utm_medium=keynote" target="_blank" rel="noopener">
+      <span class="feature-label">The keynote write-up</span>
+      <strong>Why human insight is more important than ever in the age of AI</strong>
+      <span class="feature-sub">Every story, chart and source from the talk, in one place &rarr;</span>
+    </a>
+    <ul class="links">
+      <li><a href="https://www.oneusefulthing.org/p/making-ai-work-leadership-lab-and" target="_blank" rel="noopener"><b>Leadership, Lab &amp; Crowd</b><span>Ethan Mollick on making AI work in organisations</span></a></li>
+      <li><a href="https://dtdbook.com/AI_Risk_Amanda" target="_blank" rel="noopener"><b>AI risk-of-harm framework</b><span>Audience, scale and sources: questions to ask before you ship</span></a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Thinking,_Fast_and_Slow" target="_blank" rel="noopener"><b>Thinking, Fast and Slow</b><span>Daniel Kahneman: write your prompts in System 2</span></a></li>
+      <li><a href="https://www.penguinrandomhouse.com/books/743569/empire-of-ai-by-karen-hao/" target="_blank" rel="noopener"><b>Empire of AI</b><span>Karen Hao's book on who holds the power</span></a></li>
+      <li><a href="https://www.gatesnotes.com/a-turbulent-ai-era-and-critical-choices-to-make" target="_blank" rel="noopener"><b>A turbulent AI era</b><span>Bill Gates's manifesto. What's yours?</span></a></li>
+      <li><a href="http://addtoplaylist.howtospeakdata.com/" target="_blank" rel="noopener"><b>Add To Playlist</b><span>My vibe-coding epiphany, live</span></a></li>
+    </ul>
+  </section>
+
+  <!-- ============ ABOUT ANDY ============ -->
+  <section class="panel about" id="about" aria-labelledby="aboutTitle">
+    <p class="kicker kicker--dark">So, who is asking?</p>
+    <img class="about-photo" src="assets/andy-and-the-robots.webp" alt="Andy Cotgreave between the Red Rocker and Blue Bomber robots" width="1200" height="716" loading="lazy">
+    <h2 id="aboutTitle">I'm Andy Cotgreave. I've spent 20 years helping people enjoy, not endure, data.</h2>
+    <ul class="creds">
+      <li>Co-author of <em>The Big Book of Dashboards</em> and <em>Dashboards That Deliver</em> (Wiley, 2025)</li>
+      <li>Over 20 years in analytics &amp; data visualisation: analyst at the University of Oxford, then 15 years at Tableau</li>
+      <li>Hosts the video series <em>The AI Analyst?</em> and <em>Chart Chat</em></li>
+      <li>Writes the How To Speak Data newsletter</li>
+    </ul>
+
+    <div class="asks">
+      <p>Want Andy to speak at your event?</p>
+      <p>Looking for data storytelling training?</p>
+      <p>Want to talk about A.I.?</p>
+    </div>
+
+    <div class="cta-row">
+      <a class="btn btn--dark" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1p0qUydPTMO3RcjmcLY5Vw37-KiAuzNtrpuIF1clypBsru3p6l2uKK_EcFu4OqUElF9TsqWOcq" target="_blank" rel="noopener">Book a call</a>
+      <a class="btn btn--outline" href="mailto:andy@howtospeakdata.com?subject=Saw%20your%20robot%20keynote">Email Andy</a>
+    </div>
+    <p class="site-link"><a href="https://howtospeakdata.com">howtospeakdata.com</a></p>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Your vote is stored with the time and a rough location (country and city) worked out from your connection. No names, emails or IP addresses are kept. <a href="https://github.com/acotgreave/robot-vote/blob/main/data/votes.csv">See all the votes</a>.</p>
+  <p>&copy; How To Speak Data</p>
+</footer>
+
+<div class="sticky" id="sticky" aria-label="Stay in touch">
+  <span class="sticky-label">Follow Andy</span>
+  <a class="sticky-btn sticky-btn--substack" href="https://howtospeakdata.substack.com/subscribe?utm_source=robot&amp;utm_medium=keynote&amp;utm_content=sticky" target="_blank" rel="noopener">Substack</a>
+  <a class="sticky-btn sticky-btn--linkedin" href="https://www.linkedin.com/in/acotgreave/" target="_blank" rel="noopener">LinkedIn</a>
+  <button type="button" class="sticky-close" id="stickyClose" aria-label="Hide">&times;</button>
+</div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
