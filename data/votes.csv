@@ -120,3 +120,5 @@ vote_id,timestamp_utc,robot,robot_label,country,region,city,event,source
 121,2026-09-29T12:30:31.617Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Thame,,web
 122,2026-09-29T14:07:47.708Z,blue,Blue Bomber (This AI tech is amazing),SE,Stockholm,Stockholm,,web
 123,2026-09-29T14:39:24.297Z,red,Red Rocker (AI is too dangerous),US,New York,Ossining,,web
+124,2026-09-29T20:51:56.709Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Thame,,web
+125,2026-09-29T20:52:56.993Z,red,Red Rocker (AI is too dangerous),GB,England,Thame,,web
