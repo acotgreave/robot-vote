@@ -48,17 +48,19 @@ h1, h2, h3 { font-family: var(--display); font-weight: 400; letter-spacing: 0.02
 }
 
 .talk[hidden], .has-talk .brand { display: none; }
+/* Same 50px height as the plain bar, so the robots and vote buttons don't move down. */
+.topbar.has-talk { height: 50px; padding-top: 0; padding-bottom: 0; align-items: center; box-sizing: content-box; padding-top: env(safe-area-inset-top); }
 .talk {
   display: flex; align-items: center; gap: 12px; max-width: 520px; width: 100%;
   text-decoration: none; color: #fff;
 }
-.talk-icon { width: 40px; height: 40px; border-radius: 50%; flex: none; border: 2px solid #fff; }
-.talk-text { flex: 1; min-width: 0; display: flex; flex-direction: column; line-height: 1.05; }
+.talk-icon { width: 34px; height: 34px; border-radius: 50%; flex: none; border: 2px solid #fff; }
+.talk-text { flex: 1; min-width: 0; display: flex; flex-direction: column; line-height: 1; }
 .talk-kicker { font-family: var(--display); color: var(--yellow); font-size: clamp(13px, 4.1vw, 16px); letter-spacing: 0.06em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.talk-detail { font-family: var(--display); font-size: clamp(19px, 5.6vw, 26px); letter-spacing: 0.03em; }
+.talk-detail { font-family: var(--display); font-size: clamp(17px, 5.2vw, 22px); letter-spacing: 0.03em; }
 .talk-arrow {
   flex: none; font-size: 22px; font-weight: 800; color: var(--ink); background: var(--yellow);
-  width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center;
+  width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center;
 }
 .talk:hover .talk-detail, .talk:focus-visible .talk-detail { text-decoration: underline; }
 
