@@ -58,6 +58,11 @@ Use **Reset my vote** in the striped banner to vote again. Local test votes go t
 
 To test the Worker itself without touching live data: `npx wrangler dev` in `worker/` (local database), then point `config.js` at `http://localhost:8787`.
 
+## Publishing changes
+
+`index.html` loads `styles.css`, `config.js` and `app.js` with a `?v=` version number. Bump it whenever those files change,
+or visitors' browsers may keep using their saved copies for a while.
+
 ## Files
 
 | File | What it is |
