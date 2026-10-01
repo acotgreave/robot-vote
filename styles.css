@@ -55,6 +55,15 @@ h1, h2, h3 { font-family: var(--display); font-weight: 400; letter-spacing: 0.02
   text-decoration: none; color: #fff;
 }
 .talk-icon { width: 34px; height: 34px; border-radius: 50%; flex: none; border: 2px solid #fff; }
+/* One spin of the compass shortly after the page opens, then it stays still. */
+.talk-icon { animation: compassSpin 1.4s cubic-bezier(.25,.9,.3,1.25) 0.8s 1 both; }
+@keyframes compassSpin {
+  0%   { transform: rotate(0) scale(1); }
+  15%  { transform: rotate(-25deg) scale(1.12); }
+  75%  { transform: rotate(375deg) scale(1.12); }
+  88%  { transform: rotate(352deg) scale(1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
 .talk-text { flex: 1; min-width: 0; display: flex; flex-direction: column; line-height: 1; }
 .talk-kicker { font-family: var(--display); color: var(--yellow); font-size: clamp(13px, 4.1vw, 16px); letter-spacing: 0.06em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .talk-detail { font-family: var(--display); font-size: clamp(17px, 5.2vw, 22px); letter-spacing: 0.03em; }
