@@ -127,3 +127,20 @@ vote_id,timestamp_utc,robot,robot_label,country,region,city,event,source
 128,2026-10-01T14:24:40.828Z,red,Red Rocker (AI is too dangerous),GB,England,Thetford,,web
 129,2026-10-01T14:33:14.637Z,blue,Blue Bomber (This AI tech is amazing),US,Illinois,Chicago,,web
 130,2026-10-01T14:35:48.454Z,blue,Blue Bomber (This AI tech is amazing),US,New Jersey,Princeton,,web
+131,2026-10-01T14:38:15.747Z,blue,Blue Bomber (This AI tech is amazing),DE,Baden-Wurttemberg,Karlsruhe,,web
+132,2026-10-01T14:39:39.857Z,red,Red Rocker (AI is too dangerous),GB,England,Rochdale,,web
+133,2026-10-01T14:55:44.559Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Leeds,,web
+134,2026-10-01T15:05:21.489Z,red,Red Rocker (AI is too dangerous),US,Pennsylvania,Conshohocken,,web
+135,2026-10-01T15:08:06.206Z,blue,Blue Bomber (This AI tech is amazing),GB,England,London,,web
+136,2026-10-01T15:19:20.528Z,blue,Blue Bomber (This AI tech is amazing),GB,England,London,,web
+137,2026-10-01T15:31:00.528Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+138,2026-10-01T15:43:34.800Z,red,Red Rocker (AI is too dangerous),GB,England,Kingston upon Hull,,web
+139,2026-10-01T15:59:50.931Z,blue,Blue Bomber (This AI tech is amazing),NL,North Holland,Amsterdam,,web
+140,2026-10-01T16:01:03.071Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Rochdale,,web
+141,2026-10-01T17:15:54.546Z,blue,Blue Bomber (This AI tech is amazing),NL,North Holland,Amsterdam,,web
+142,2026-10-01T17:18:27.097Z,blue,Blue Bomber (This AI tech is amazing),CA,Ontario,Ottawa,,web
+143,2026-10-01T17:53:45.661Z,red,Red Rocker (AI is too dangerous),US,Indiana,Noblesville,,web
+144,2026-10-01T17:56:54.067Z,blue,Blue Bomber (This AI tech is amazing),US,District of Columbia,Washington,,web
+145,2026-10-01T18:08:11.877Z,red,Red Rocker (AI is too dangerous),US,North Carolina,Charlotte,,web
+146,2026-10-01T18:43:35.249Z,blue,Blue Bomber (This AI tech is amazing),IN,Uttar Pradesh,Ghāziābād,,web
+147,2026-10-01T18:58:15.051Z,blue,Blue Bomber (This AI tech is amazing),US,South Carolina,Irmo,,web
