@@ -214,6 +214,17 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   window.addEventListener("resize", onScroll);
 
+  // ---------- upcoming talk banner (set in config.js) ----------
+  var talk = window.NEXT_TALK;
+  if (talk && talk.url && Date.now() < Date.parse(talk.hideAfter)) {
+    $("talk").href = talk.url;
+    $("talkIcon").src = talk.icon;
+    if (talk.event) $("talkKicker").textContent = "See Andy live at " + talk.event;
+    $("talkDetail").textContent = [talk.when, talk.where].filter(Boolean).join(" · ");
+    $("talk").hidden = false;
+    $("topbar").classList.add("has-talk");
+  }
+
   // ---------- test mode ----------
   if (TEST) {
     $("testbar").hidden = false;
