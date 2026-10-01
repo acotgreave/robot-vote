@@ -218,6 +218,8 @@
   var talk = window.NEXT_TALK;
   if (talk && talk.url && Date.now() < Date.parse(talk.hideAfter)) {
     $("talk").href = talk.url;
+    // Start the spin only once the icon is actually on screen, or it can finish unseen on slower loads.
+    $("talkIcon").onload = function () { this.classList.add("spin"); };
     $("talkIcon").src = talk.icon;
     if (talk.event) $("talkKicker").textContent = "See Andy live at " + talk.event;
     $("talkDetail").textContent = [talk.when, talk.where].filter(Boolean).join(" · ");
