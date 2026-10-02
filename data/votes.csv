@@ -151,3 +151,66 @@ vote_id,timestamp_utc,robot,robot_label,country,region,city,event,source
 152,2026-10-01T23:45:27.402Z,red,Red Rocker (AI is too dangerous),US,New Jersey,Forked River,,web
 153,2026-10-01T23:50:30.350Z,red,Red Rocker (AI is too dangerous),US,Massachusetts,Longmeadow,,web
 154,2026-10-02T01:04:12.269Z,red,Red Rocker (AI is too dangerous),US,Ohio,Columbus,,web
+155,2026-10-02T03:13:22.787Z,red,Red Rocker (AI is too dangerous),US,New Jersey,Jersey City,,web
+156,2026-10-02T04:39:48.958Z,red,Red Rocker (AI is too dangerous),CA,British Columbia,Vancouver,,web
+157,2026-10-02T06:58:04.381Z,blue,Blue Bomber (This AI tech is amazing),ZA,Western Cape,Cape Town,,web
+158,2026-10-02T07:00:35.210Z,blue,Blue Bomber (This AI tech is amazing),HU,Budapest,Budapest,,web
+159,2026-10-02T07:15:22.308Z,red,Red Rocker (AI is too dangerous),HU,Budapest,Budapest,,web
+160,2026-10-02T07:15:46.188Z,blue,Blue Bomber (This AI tech is amazing),HU,Budapest,Budapest,,web
+161,2026-10-02T07:17:33.021Z,blue,Blue Bomber (This AI tech is amazing),HU,Budapest,Budapest,,web
+162,2026-10-02T07:17:57.686Z,red,Red Rocker (AI is too dangerous),HU,Budapest,Budapest,,web
+163,2026-10-02T07:18:25.199Z,red,Red Rocker (AI is too dangerous),HU,Budapest,Budapest,,web
+164,2026-10-02T07:19:38.259Z,red,Red Rocker (AI is too dangerous),HU,Budapest,Budapest,,web
+165,2026-10-02T07:22:58.991Z,red,Red Rocker (AI is too dangerous),HU,Budapest,Budapest,,web
+166,2026-10-02T07:23:10.894Z,blue,Blue Bomber (This AI tech is amazing),HU,Budapest,Budapest,,web
+167,2026-10-02T07:23:55.773Z,red,Red Rocker (AI is too dangerous),HU,Budapest,Budapest,,web
+168,2026-10-02T07:24:41.086Z,blue,Blue Bomber (This AI tech is amazing),HU,Budapest,Budapest,,web
+169,2026-10-02T07:24:41.908Z,blue,Blue Bomber (This AI tech is amazing),HU,Budapest,Budapest,,web
+170,2026-10-02T07:25:29.945Z,blue,Blue Bomber (This AI tech is amazing),HU,Pest County,Vác,,web
+171,2026-10-02T07:26:06.791Z,red,Red Rocker (AI is too dangerous),HU,Budapest,Budapest,,web
+172,2026-10-02T07:27:12.349Z,blue,Blue Bomber (This AI tech is amazing),HU,Pest County,Vác,,web
+173,2026-10-02T07:27:24.210Z,blue,Blue Bomber (This AI tech is amazing),HU,Budapest,Budapest,,web
+174,2026-10-02T07:28:14.913Z,red,Red Rocker (AI is too dangerous),HU,Pest County,Vác,,web
+175,2026-10-02T07:28:25.323Z,blue,Blue Bomber (This AI tech is amazing),HU,Pest County,Szigetszentmiklós,,web
+176,2026-10-02T07:29:25.327Z,red,Red Rocker (AI is too dangerous),HU,Pest County,Vác,,web
+177,2026-10-02T07:30:53.100Z,blue,Blue Bomber (This AI tech is amazing),HU,Budapest,Budapest,,web
+178,2026-10-02T07:32:43.475Z,red,Red Rocker (AI is too dangerous),HU,Budapest,Budapest,,web
+179,2026-10-02T07:35:37.736Z,blue,Blue Bomber (This AI tech is amazing),HU,Pest County,Vác,,web
+180,2026-10-02T07:35:37.911Z,red,Red Rocker (AI is too dangerous),HU,Pest County,Vác,,web
+181,2026-10-02T07:35:45.230Z,blue,Blue Bomber (This AI tech is amazing),HU,Budapest,Budapest,,web
+182,2026-10-02T07:35:45.906Z,red,Red Rocker (AI is too dangerous),HU,Budapest,Budapest,,web
+183,2026-10-02T07:35:46.918Z,blue,Blue Bomber (This AI tech is amazing),HU,Budapest,Budapest,,web
+184,2026-10-02T07:35:52.568Z,blue,Blue Bomber (This AI tech is amazing),HU,Pest County,Vác,,web
+185,2026-10-02T07:36:09.138Z,blue,Blue Bomber (This AI tech is amazing),HU,Pest County,Vác,,web
+186,2026-10-02T07:37:01.672Z,red,Red Rocker (AI is too dangerous),HU,Pest County,Vác,,web
+187,2026-10-02T07:39:00.326Z,blue,Blue Bomber (This AI tech is amazing),HU,Pest County,Vác,,web
+188,2026-10-02T07:42:50.125Z,red,Red Rocker (AI is too dangerous),GB,England,London,,web
+189,2026-10-02T07:53:35.234Z,red,Red Rocker (AI is too dangerous),HU,Budapest,Budapest,,web
+190,2026-10-02T08:03:11.856Z,red,Red Rocker (AI is too dangerous),HU,Pest County,Vác,,web
+191,2026-10-02T08:03:14.228Z,red,Red Rocker (AI is too dangerous),DE,State of Berlin,Berlin,,web
+192,2026-10-02T08:08:07.993Z,blue,Blue Bomber (This AI tech is amazing),HU,Budapest,Budapest,,web
+193,2026-10-02T08:14:38.558Z,blue,Blue Bomber (This AI tech is amazing),HU,Budapest,Budapest,,web
+194,2026-10-02T08:14:49.381Z,red,Red Rocker (AI is too dangerous),HU,Pest County,Vác,,web
+195,2026-10-02T08:14:59.759Z,blue,Blue Bomber (This AI tech is amazing),HU,Budapest,Budapest,,web
+196,2026-10-02T08:14:59.946Z,red,Red Rocker (AI is too dangerous),HU,Pest County,Vác,,web
+197,2026-10-02T08:15:02.072Z,red,Red Rocker (AI is too dangerous),HU,Budapest,Budapest,,web
+198,2026-10-02T08:15:03.464Z,blue,Blue Bomber (This AI tech is amazing),CZ,Ústí nad Labem Region,Louny,,web
+199,2026-10-02T08:15:26.491Z,red,Red Rocker (AI is too dangerous),DE,Saxony,Wurzen,,web
+200,2026-10-02T08:15:34.081Z,blue,Blue Bomber (This AI tech is amazing),HU,Pest County,Vác,,web
+201,2026-10-02T08:15:47.447Z,red,Red Rocker (AI is too dangerous),PL,Mazovia,Warsaw,,web
+202,2026-10-02T08:16:21.852Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Kettering,,web
+203,2026-10-02T08:16:33.477Z,blue,Blue Bomber (This AI tech is amazing),HU,Budapest,Budapest,,web
+204,2026-10-02T08:16:49.046Z,red,Red Rocker (AI is too dangerous),HU,Budapest,Budapest,,web
+205,2026-10-02T08:16:54.652Z,red,Red Rocker (AI is too dangerous),SE,Gävleborg,Gävle,,web
+206,2026-10-02T08:16:56.310Z,blue,Blue Bomber (This AI tech is amazing),HU,Jász-Nagykun-Szolnok,Szolnok,,web
+207,2026-10-02T08:17:06.859Z,blue,Blue Bomber (This AI tech is amazing),HU,Budapest,Budapest,,web
+208,2026-10-02T08:17:16.677Z,blue,Blue Bomber (This AI tech is amazing),HU,Budapest,Budapest,,web
+209,2026-10-02T08:17:43.376Z,blue,Blue Bomber (This AI tech is amazing),HU,Budapest,Budapest,,web
+210,2026-10-02T08:17:50.157Z,red,Red Rocker (AI is too dangerous),HU,Pest County,Vác,,web
+211,2026-10-02T08:20:23.888Z,blue,Blue Bomber (This AI tech is amazing),HU,Budapest,Budapest,,web
+212,2026-10-02T08:20:44.818Z,red,Red Rocker (AI is too dangerous),HU,Budapest,Budapest,,web
+213,2026-10-02T08:28:28.533Z,red,Red Rocker (AI is too dangerous),HU,Budapest,Budapest,,web
+214,2026-10-02T08:36:27.779Z,blue,Blue Bomber (This AI tech is amazing),IT,Veneto,Padua,,web
+215,2026-10-02T08:36:47.041Z,blue,Blue Bomber (This AI tech is amazing),HU,Budapest,Budapest,,web
+216,2026-10-02T08:48:10.458Z,blue,Blue Bomber (This AI tech is amazing),ES,Catalonia,Barcelona,,web
+217,2026-10-02T09:08:36.149Z,red,Red Rocker (AI is too dangerous),HU,Budapest,Budapest,,web
