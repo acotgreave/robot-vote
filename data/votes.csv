@@ -148,3 +148,6 @@ vote_id,timestamp_utc,robot,robot_label,country,region,city,event,source
 149,2026-10-01T21:20:52.864Z,red,Red Rocker (AI is too dangerous),US,Illinois,Chicago,,web
 150,2026-10-01T22:53:47.972Z,blue,Blue Bomber (This AI tech is amazing),IE,Leinster,Athlone,,web
 151,2026-10-01T23:04:31.356Z,red,Red Rocker (AI is too dangerous),PH,National Capital Region,Manila,,web
+152,2026-10-01T23:45:27.402Z,red,Red Rocker (AI is too dangerous),US,New Jersey,Forked River,,web
+153,2026-10-01T23:50:30.350Z,red,Red Rocker (AI is too dangerous),US,Massachusetts,Longmeadow,,web
+154,2026-10-02T01:04:12.269Z,red,Red Rocker (AI is too dangerous),US,Ohio,Columbus,,web
