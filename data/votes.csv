@@ -232,3 +232,4 @@ vote_id,timestamp_utc,robot,robot_label,country,region,city,event,source
 233,2026-10-02T12:56:23.473Z,blue,Blue Bomber (This AI tech is amazing),HU,Pest County,Vác,,web
 234,2026-10-02T12:56:46.053Z,red,Red Rocker (AI is too dangerous),HU,Pest County,Vác,,web
 235,2026-10-02T14:55:50.635Z,red,Red Rocker (AI is too dangerous),PL,Greater Poland,Poznań,,web
+236,2026-10-02T18:25:48.838Z,blue,Blue Bomber (This AI tech is amazing),US,Minnesota,Minneapolis,,web
