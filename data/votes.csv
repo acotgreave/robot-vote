@@ -236,3 +236,4 @@ vote_id,timestamp_utc,robot,robot_label,country,region,city,event,source
 237,2026-10-03T22:40:08.938Z,red,Red Rocker (AI is too dangerous),US,California,Santa Monica,,web
 238,2026-10-04T16:50:58.183Z,red,Red Rocker (AI is too dangerous),IT,Piedmont,Turin,,web
 239,2026-10-04T18:52:08.105Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Cannock,,web
+240,2026-10-05T15:12:02.692Z,red,Red Rocker (AI is too dangerous),US,North Carolina,Charlotte,,web
