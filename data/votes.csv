@@ -240,3 +240,4 @@ vote_id,timestamp_utc,robot,robot_label,country,region,city,event,source
 241,2026-10-07T08:37:45.319Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Bournemouth,,web
 242,2026-10-07T11:07:27.780Z,blue,Blue Bomber (This AI tech is amazing),NL,North Holland,Amsterdam,,web
 243,2026-10-09T07:16:51.439Z,red,Red Rocker (AI is too dangerous),AU,South Australia,Adelaide,,web
+244,2026-10-10T10:06:18.964Z,blue,Blue Bomber (This AI tech is amazing),FR,Île-de-France,Paris,,web
