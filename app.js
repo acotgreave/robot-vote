@@ -217,14 +217,46 @@
   // ---------- upcoming talk banner (set in config.js) ----------
   var talk = window.NEXT_TALK;
   if (talk && talk.url && Date.now() < Date.parse(talk.hideAfter)) {
+    var kicker = talk.event ? "See Andy live at " + talk.event : "See Andy live";
+    var detail = [talk.when, talk.where].filter(Boolean).join(" · ");
     $("talk").href = talk.url;
-    // Start the spin only once the icon is actually on screen, or it can finish unseen on slower loads.
-    $("talkIcon").onload = function () { this.classList.add("spin"); };
+    $("talk").setAttribute("aria-label", kicker + ": " + detail);
+    $("talkKicker").textContent = kicker;
+    $("talkDetail").textContent = detail;
+    // Animate only once the icon is actually on screen, or it can finish unseen on slower loads.
+    $("talkIcon").onload = function () {
+      if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      if (talk.animation === "decode") {
+        this.classList.add("pop");
+        decode($("talkKicker"), kicker, 0);
+        decode($("talkDetail"), detail, 250);
+      } else {
+        this.classList.add("spin");
+      }
+    };
     $("talkIcon").src = talk.icon;
-    if (talk.event) $("talkKicker").textContent = "See Andy live at " + talk.event;
-    $("talkDetail").textContent = [talk.when, talk.where].filter(Boolean).join(" · ");
     $("talk").hidden = false;
     $("topbar").classList.add("has-talk");
+  }
+
+  // Letters flicker through random code characters, then lock in from left to right.
+  function decode(el, text, delay) {
+    var glyphs = "01#%&$@*<>/=+";
+    var start = null, perChar = 45, flicker = 400;
+    el.textContent = text.replace(/\S/g, function () { return glyphs[Math.floor(Math.random() * glyphs.length)]; });
+    function frame(t) {
+      if (start === null) start = t;
+      var elapsed = t - start - delay, out = "", done = true;
+      for (var i = 0; i < text.length; i++) {
+        var ch = text.charAt(i);
+        if (ch === " " || elapsed > flicker + i * perChar) { out += ch; continue; }
+        done = false;
+        out += glyphs.charAt(Math.floor(Math.random() * glyphs.length));
+      }
+      el.textContent = out;
+      if (!done) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
   }
 
   // ---------- test mode ----------
