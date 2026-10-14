@@ -247,3 +247,5 @@ vote_id,timestamp_utc,robot,robot_label,country,region,city,event,source
 248,2026-10-12T10:07:33.970Z,red,Red Rocker (AI is too dangerous),GB,England,Solihull,,web
 249,2026-10-12T10:08:18.592Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
 250,2026-10-13T10:47:19.581Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+251,2026-10-14T08:07:51.720Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+252,2026-10-14T10:36:59.747Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
