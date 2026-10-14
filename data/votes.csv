@@ -249,3 +249,97 @@ vote_id,timestamp_utc,robot,robot_label,country,region,city,event,source
 250,2026-10-13T10:47:19.581Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
 251,2026-10-14T08:07:51.720Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
 252,2026-10-14T10:36:59.747Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+253,2026-10-14T11:26:16.721Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Manchester,,web
+254,2026-10-14T11:26:17.061Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+255,2026-10-14T11:26:21.037Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+256,2026-10-14T11:26:21.415Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Manchester,,web
+257,2026-10-14T11:26:24.274Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Manchester,,web
+258,2026-10-14T11:26:24.629Z,red,Red Rocker (AI is too dangerous),GB,England,Eccles,,web
+259,2026-10-14T11:26:25.440Z,red,Red Rocker (AI is too dangerous),GB,England,London,,web
+260,2026-10-14T11:26:27.535Z,red,Red Rocker (AI is too dangerous),GB,England,Stoke-on-Trent,,web
+261,2026-10-14T11:26:27.584Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+262,2026-10-14T11:26:28.549Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+263,2026-10-14T11:26:28.601Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Manchester,,web
+264,2026-10-14T11:26:28.609Z,red,Red Rocker (AI is too dangerous),GB,Scotland,Perth,,web
+265,2026-10-14T11:26:28.977Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Manchester,,web
+266,2026-10-14T11:26:30.703Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Manchester,,web
+267,2026-10-14T11:26:30.991Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Manchester,,web
+268,2026-10-14T11:26:31.449Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+269,2026-10-14T11:26:32.686Z,blue,Blue Bomber (This AI tech is amazing),GB,England,London,,web
+270,2026-10-14T11:26:32.820Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+271,2026-10-14T11:26:33.408Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+272,2026-10-14T11:26:33.458Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Manchester,,web
+273,2026-10-14T11:26:33.501Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+274,2026-10-14T11:26:33.512Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+275,2026-10-14T11:26:33.740Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+276,2026-10-14T11:26:33.771Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Manchester,,web
+277,2026-10-14T11:26:34.087Z,red,Red Rocker (AI is too dangerous),GB,England,London,,web
+278,2026-10-14T11:26:34.159Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+279,2026-10-14T11:26:35.556Z,blue,Blue Bomber (This AI tech is amazing),GB,England,London,,web
+280,2026-10-14T11:26:36.200Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Manchester,,web
+281,2026-10-14T11:26:38.799Z,red,Red Rocker (AI is too dangerous),GB,England,London,,web
+282,2026-10-14T11:26:40.621Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+283,2026-10-14T11:26:40.773Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Manchester,,web
+284,2026-10-14T11:26:41.436Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Manchester,,web
+285,2026-10-14T11:26:44.183Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+286,2026-10-14T11:26:44.359Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+287,2026-10-14T11:26:45.528Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+288,2026-10-14T11:26:46.911Z,red,Red Rocker (AI is too dangerous),GB,England,London,,web
+289,2026-10-14T11:26:47.073Z,red,Red Rocker (AI is too dangerous),IE,Leinster,Dublin,,web
+290,2026-10-14T11:26:48.384Z,blue,Blue Bomber (This AI tech is amazing),GB,England,London,,web
+291,2026-10-14T11:26:49.553Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+292,2026-10-14T11:26:50.141Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+293,2026-10-14T11:26:50.841Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Manchester,,web
+294,2026-10-14T11:26:54.955Z,red,Red Rocker (AI is too dangerous),GB,England,Swindon,,web
+295,2026-10-14T11:26:55.907Z,blue,Blue Bomber (This AI tech is amazing),NO,Vestland,Bergen,,web
+296,2026-10-14T11:27:06.671Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Manchester,,web
+297,2026-10-14T11:27:08.040Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+298,2026-10-14T11:27:08.533Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+299,2026-10-14T11:27:08.945Z,blue,Blue Bomber (This AI tech is amazing),GB,England,London,,web
+300,2026-10-14T11:27:14.285Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+301,2026-10-14T11:27:14.470Z,red,Red Rocker (AI is too dangerous),GB,England,London,,web
+302,2026-10-14T11:27:14.719Z,red,Red Rocker (AI is too dangerous),GB,England,London,,web
+303,2026-10-14T11:27:15.968Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+304,2026-10-14T11:27:16.048Z,red,Red Rocker (AI is too dangerous),BR,São Paulo,São José do Rio Preto,,web
+305,2026-10-14T11:27:18.059Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+306,2026-10-14T11:27:18.666Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+307,2026-10-14T11:27:19.238Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Manchester,,web
+308,2026-10-14T11:27:20.026Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+309,2026-10-14T11:27:22.475Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+310,2026-10-14T11:27:23.432Z,red,Red Rocker (AI is too dangerous),GB,England,London,,web
+311,2026-10-14T11:27:24.448Z,red,Red Rocker (AI is too dangerous),GB,England,Washington,,web
+312,2026-10-14T11:27:25.190Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Manchester,,web
+313,2026-10-14T11:27:26.573Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+314,2026-10-14T11:27:34.179Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Manchester,,web
+315,2026-10-14T11:27:34.280Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+316,2026-10-14T11:27:35.203Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+317,2026-10-14T11:27:37.460Z,blue,Blue Bomber (This AI tech is amazing),GB,England,London,,web
+318,2026-10-14T11:27:43.744Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Manchester,,web
+319,2026-10-14T11:27:47.451Z,blue,Blue Bomber (This AI tech is amazing),GB,England,London,,web
+320,2026-10-14T11:28:00.885Z,red,Red Rocker (AI is too dangerous),GB,England,Croydon,,web
+321,2026-10-14T11:28:04.089Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+322,2026-10-14T11:28:24.750Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+324,2026-10-14T11:28:39.157Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+325,2026-10-14T11:28:40.154Z,blue,Blue Bomber (This AI tech is amazing),GB,England,London,,web
+326,2026-10-14T11:28:51.162Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+327,2026-10-14T11:28:57.133Z,red,Red Rocker (AI is too dangerous),GB,England,London,,web
+328,2026-10-14T11:29:19.134Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Manchester,,web
+329,2026-10-14T11:30:48.435Z,blue,Blue Bomber (This AI tech is amazing),GB,Wales,Cardiff,,web
+330,2026-10-14T11:31:17.072Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+331,2026-10-14T11:31:54.445Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+332,2026-10-14T11:32:57.679Z,red,Red Rocker (AI is too dangerous),CA,Quebec,Montréal,,web
+333,2026-10-14T11:33:12.498Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+334,2026-10-14T11:34:28.077Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+335,2026-10-14T11:36:39.616Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Manchester,,web
+336,2026-10-14T11:37:12.421Z,red,Red Rocker (AI is too dangerous),GB,England,London,,web
+337,2026-10-14T11:45:20.688Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+338,2026-10-14T11:45:41.615Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+339,2026-10-14T11:47:48.343Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+340,2026-10-14T11:48:44.435Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+341,2026-10-14T12:01:10.603Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Manchester,,web
+342,2026-10-14T12:24:25.591Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+343,2026-10-14T12:38:52.094Z,red,Red Rocker (AI is too dangerous),GB,England,Warrington,,web
+344,2026-10-14T13:05:14.182Z,blue,Blue Bomber (This AI tech is amazing),GB,England,St Helens,,web
+345,2026-10-14T13:10:51.022Z,red,Red Rocker (AI is too dangerous),GB,England,Manchester,,web
+346,2026-10-14T13:22:06.644Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Manchester,,web
+347,2026-10-14T14:55:36.079Z,red,Red Rocker (AI is too dangerous),GB,England,Birmingham,,web
