@@ -8,7 +8,8 @@ window.NEXT_TALK = {
   where: "San Francisco",
   event: "Hex Prompt",
   url: "https://hex.tech/prompt/agenda/",
-  icon: "assets/talk-hex.jpg",
+  icon: "assets/talk-hex.png",
+  iconShape: "wordmark", // "wordmark" = plain logo lettering; leave out for a round badge
   animation: "decode", // "spin" (compass-style turn) or "decode" (text scrambles then resolves)
   hideAfter: "2026-10-27T13:00:00-07:00" // San Francisco time (talk is 11.45am, Main stage); the banner disappears after this
 };

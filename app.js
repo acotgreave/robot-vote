@@ -234,6 +234,7 @@
         this.classList.add("spin");
       }
     };
+    if (talk.iconShape === "wordmark") $("talkIcon").classList.add("talk-icon--wordmark");
     $("talkIcon").src = talk.icon;
     $("talk").hidden = false;
     $("topbar").classList.add("has-talk");

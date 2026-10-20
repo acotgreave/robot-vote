@@ -56,6 +56,12 @@ h1, h2, h3 { font-family: var(--display); font-weight: 400; letter-spacing: 0.02
 }
 .talk-icon { width: 34px; height: 34px; border-radius: 50%; flex: none; border: 2px solid #fff; }
 /* One spin of the compass shortly after the page opens, then it stays still. */
+/* A logo shown as plain lettering on the bar, instead of in a round badge */
+.talk-icon--wordmark { width: auto; height: 30px; border: 0; border-radius: 0; }
+@media (max-width: 350px) {
+  .has-talk .talk { gap: 8px; }
+  .talk-icon--wordmark { height: 22px; }
+}
 /* "decode": the badge pops in while the text decodes (see app.js) */
 .talk-icon.pop { animation: badgePop 0.6s cubic-bezier(.2,1.8,.4,1) both; }
 @keyframes badgePop { 0% { transform: scale(0.3) rotate(-12deg); opacity: 0; } 100% { transform: none; opacity: 1; } }
