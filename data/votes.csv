@@ -351,3 +351,4 @@ vote_id,timestamp_utc,robot,robot_label,country,region,city,event,source
 353,2026-10-16T10:17:59.758Z,blue,Blue Bomber (This AI tech is amazing),GB,England,London,,web
 354,2026-10-19T13:46:52.666Z,red,Red Rocker (AI is too dangerous),GB,England,Portsmouth,,web
 355,2026-10-19T14:45:00.223Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Bolton,,web
+356,2026-10-22T14:48:30.482Z,blue,Blue Bomber (This AI tech is amazing),GB,England,Oxford,,web
