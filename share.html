@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Round by round | Share image</title>
+  <!--
+    Social images for the "Round by round" results, drawn from live votes.
+      share.html?format=landscape   1200 x 628  (screenshot at 2x for 2400 x 1256)
+      share.html?format=portrait    1080 x 1350 (screenshot at 2x for 2160 x 2700)
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    html, body { margin: 0; overflow: hidden; }
+    .card { position: relative; box-sizing: border-box; display: grid; overflow: hidden; }
+    .card--landscape { width: 1200px; height: 628px; padding: 34px 40px 0; grid-template-columns: 400px 1fr; grid-template-rows: 1fr auto; column-gap: 36px; }
+    .card--portrait { width: 1080px; height: 1350px; padding: 56px 60px 0; grid-template-rows: auto auto 1fr auto; }
+
+    .s-intro { display: flex; flex-direction: column; align-items: flex-start; }
+    .s-kicker {
+      display: inline-block; font-family: var(--display); letter-spacing: 0.05em;
+      background: var(--ink); color: var(--yellow); padding: 6px 14px 3px; border-radius: 8px; transform: rotate(-1.5deg);
+    }
+    .s-title { font-family: var(--display); font-weight: 400; line-height: 0.98; margin: 14px 0 0; color: var(--ink); text-shadow: 4px 4px 0 var(--yellow); }
+    .s-robots { display: flex; align-items: flex-end; gap: 6px; margin-top: auto; }
+    .s-robots img { height: 100%; width: auto; }
+    .s-vs { font-family: var(--display); color: var(--yellow); -webkit-text-stroke: 2px var(--ink); text-shadow: 4px 4px 0 var(--ink); transform: rotate(-8deg); align-self: center; }
+
+    .s-panel { margin: 0; align-self: start; position: relative; }
+    .s-panel h2 { margin: 0; }
+    .s-panel .history-key { font-size: 17px; margin: 6px 0 18px; }
+    .s-panel .hrow { grid-template-columns: 84px 1fr; gap: 16px; position: relative; }
+    /* highlighter band behind the row the callout talks about */
+    .s-panel .hrow.is-called::before {
+      content: ""; position: absolute; inset: -5px -10px -7px -12px; background: var(--yellow); border-radius: 10px; z-index: -1;
+    }
+    .s-panel .history-rows { position: relative; z-index: 0; }
+    .s-panel .hrow-logo { height: 46px; }
+    .s-panel .hrow-name { font-size: 26px; line-height: 0.9; }
+    .s-panel .hrow-track { height: 50px; }
+    .s-panel .hrow-seg { font-size: 30px; padding-left: 12px; padding-right: 12px; }
+    .s-panel .hrow-seg--blue { padding-left: 0; }
+    .s-panel .hrow--soon .hrow-track { font-size: 26px; }
+    .s-panel .hrow--soon .hrow-track small { font-size: 17px; }
+
+    /* comic callout for the standout audience */
+    .s-callout {
+      position: absolute; z-index: 2; top: -18px; right: -14px; font-family: var(--display); letter-spacing: 0.03em; line-height: 1;
+      background: var(--yellow); color: var(--ink); border: 3px solid var(--ink); border-radius: 12px; box-shadow: 4px 4px 0 var(--ink);
+      padding: 9px 14px 6px; transform: rotate(3deg); white-space: nowrap;
+    }
+
+    .s-cta {
+      grid-column: 1 / -1; margin: 0 -60px; display: flex; align-items: center; justify-content: center; gap: 18px;
+      background: var(--ink); color: #fff; font-family: var(--display); letter-spacing: 0.04em;
+    }
+    .s-cta b { color: var(--yellow); font-weight: 400; }
+
+    .card--landscape .s-kicker { font-size: 21px; }
+    .card--landscape .s-title { font-size: 58px; }
+    .card--landscape .s-robots { height: 190px; margin-bottom: 14px; }
+    .card--landscape .s-vs { font-size: 46px; }
+    .card--landscape .s-panel { padding: 22px 26px 20px; }
+    .card--landscape .s-panel h2 { font-size: 40px; }
+    .card--landscape .history-rows { gap: 10px; }
+    .card--landscape .s-panel .hrow { min-height: 50px; }
+    .card--landscape .s-callout { font-size: 22px; }
+    .card--landscape .s-cta { height: 64px; margin: 18px -40px 0; font-size: 30px; }
+
+    .card--portrait .s-kicker { font-size: 30px; }
+    .card--portrait .s-title { font-size: 86px; }
+    .card--portrait .s-robots { height: 210px; justify-content: center; align-self: center; margin: 20px 0 26px; }
+    .card--portrait .s-vs { font-size: 64px; margin: 0 18px; }
+    .card--portrait .s-panel { padding: 30px 32px 28px; }
+    .card--portrait .s-panel h2 { font-size: 54px; }
+    .card--portrait .s-panel .history-key { font-size: 20px; }
+    .card--portrait .history-rows { gap: 16px; }
+    .card--portrait .s-panel .hrow { grid-template-columns: 100px 1fr; min-height: 60px; }
+    .card--portrait .s-panel .hrow-track { height: 60px; }
+    .card--portrait .s-panel .hrow-seg { font-size: 36px; }
+    .card--portrait .s-callout { font-size: 28px; }
+    .card--portrait .s-cta { height: 130px; margin-top: 30px; font-size: 44px; flex-direction: column; gap: 2px; line-height: 1.05; }
+    .card--portrait .s-cta > b { display: block; }
+    .card--portrait .s-cta span { font-size: 26px; color: #fff; opacity: .85; }
+  </style>
+</head>
+<body>
+  <div class="card" id="card">
+    <div class="s-intro">
+      <span class="s-kicker">Andy Cotgreave wants to know&hellip;</span>
+      <h1 class="s-title">Which robot is winning the battle in your head?</h1>
+      <div class="s-robots" aria-hidden="true">
+        <img src="assets/red-robot.webp" alt="">
+        <span class="s-vs">VS</span>
+        <img src="assets/blue-robot.webp" alt="" style="transform: scaleX(1)">
+      </div>
+    </div>
+
+    <section class="panel s-panel history is-pct" id="history">
+      <h2>Round by round</h2>
+      <div class="history-key">
+        <span><b class="key-swatch key-swatch--red"></b>Red Rocker <em>AI is too dangerous</em></span>
+        <span><b class="key-swatch key-swatch--blue"></b>Blue Bomber <em>This AI tech is amazing</em></span>
+      </div>
+      <ol class="history-rows" id="historyRows"></ol>
+      <div class="s-callout" id="callout" hidden></div>
+    </section>
+
+    <div class="s-cta"><div>Cast your vote: <b>robot.howtospeakdata.com</b></div><span id="ctaSub"></span></div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="history.js"></script>
+  <script>
+  (function () {
+    "use strict";
+    var format = new URLSearchParams(location.search).get("format") === "portrait" ? "portrait" : "landscape";
+    var card = document.getElementById("card");
+    card.classList.add("card--" + format);
+    // portrait stacks intro, robots, panel and CTA; landscape puts the panel beside the intro
+    if (format === "portrait") {
+      var intro = card.querySelector(".s-intro"), robots = card.querySelector(".s-robots");
+      card.insertBefore(robots, intro.nextSibling);
+    }
+    var logoArea = format === "portrait" ? 46 * 46 : 40 * 40, logoMax = format === "portrait" ? 54 : 46;
+
+    var api = (window.ROBOT_API || "").replace(/\/+$/, "");
+    fetch(api ? api + "/votes.csv" : "data/votes.csv").then(function (r) { return r.text(); }).then(function (text) {
+      var rows = tallyVoteHistory(window.VOTE_HISTORY, parseVoteCsv(text));
+      var list = document.getElementById("historyRows");
+      rows.forEach(function (r) {
+        var li = document.createElement("li"), total = r.red + r.blue;
+        li.className = "hrow" + (r.soon ? " hrow--soon" : "");
+        var logo = document.createElement("div");
+        logo.className = "hrow-logo";
+        if (r.ev.logo) {
+          var i = document.createElement("i");
+          i.style.setProperty("--logo", "url('" + r.ev.logo + "')");
+          sizeVoteLogo(i, r.ev.logo, logoArea, logoMax);
+          logo.appendChild(i);
+        } else {
+          logo.innerHTML = '<span class="hrow-name">' + r.ev.name + "</span>";
+        }
+        var track = document.createElement("div");
+        track.className = "hrow-track";
+        if (r.soon) {
+          track.innerHTML = r.ev.date + "<small>coming up</small>";
+        } else {
+          var pr = total ? Math.round(100 * r.red / total) : 0;
+          track.innerHTML = '<span class="hrow-bar" style="width:100%">' +
+            '<span class="hrow-seg hrow-seg--red" style="flex-grow:' + r.red + '">' + pr + "%</span>" +
+            '<span class="hrow-seg hrow-seg--blue" style="flex-grow:' + r.blue + '">' + (100 - pr) + "%</span></span>";
+        }
+        li.appendChild(logo); li.appendChild(track); list.appendChild(li);
+        r.li = li;
+      });
+
+      // Call out an audience that broke from the rest (the only one where Blue won)
+      var done = rows.filter(function (r) { return !r.soon && r.red + r.blue > 0; });
+      var blueWins = done.filter(function (r) { return r.blue > r.red; });
+      if (blueWins.length === 1 && done.length > 2) {
+        var c = document.getElementById("callout");
+        c.textContent = "Only " + blueWins[0].ev.name.replace(" Tech Summit", "") + " backed the Blue Bomber!";
+        c.hidden = false;
+        blueWins[0].li.classList.add("is-called");
+      }
+
+      var soon = rows.filter(function (r) { return r.soon; }).map(function (r) { return r.ev.name + " " + r.ev.date; });
+      if (soon.length && format === "portrait") document.getElementById("ctaSub").textContent = "Next rounds: " + soon.join(" · ");
+      document.body.setAttribute("data-ready", "1");
+    });
+  })();
+  </script>
+</body>
+</html>

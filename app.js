@@ -269,6 +269,70 @@
     });
   }
 
+  // ---------- round by round: votes per audience (events set in config.js) ----------
+  // Counting lives in history.js, shared with share.html.
+  var voteHistory = window.VOTE_HISTORY;
+  var historyMode = "pct";
+  var historyData = null;
+  function renderHistory() {
+    var max = 1;
+    historyData.forEach(function (r) { max = Math.max(max, r.red + r.blue); });
+    $("history").classList.toggle("is-pct", historyMode === "pct");
+    var list = $("historyRows");
+    list.innerHTML = "";
+    historyData.forEach(function (r) {
+      var li = document.createElement("li"), total = r.red + r.blue;
+      li.className = "hrow" + (r.soon ? " hrow--soon" : "");
+      var logo = document.createElement("div");
+      logo.className = "hrow-logo";
+      logo.title = r.ev.name;
+      if (r.ev.logo) {
+        var i = document.createElement("i");
+        i.style.setProperty("--logo", "url('" + r.ev.logo + "')");
+        sizeVoteLogo(i, r.ev.logo, 26 * 26, 30);
+        logo.appendChild(i);
+      } else {
+        var nm = document.createElement("span");
+        nm.className = "hrow-name";
+        nm.textContent = r.ev.name;
+        logo.appendChild(nm);
+      }
+      var track = document.createElement("div");
+      track.className = "hrow-track";
+      if (r.soon) {
+        track.innerHTML = r.ev.date + "<small>coming up</small>";
+        li.setAttribute("aria-label", r.ev.name + ": coming up, " + r.ev.date);
+      } else {
+        var pr = total ? Math.round(100 * r.red / total) : 0, pb = total ? 100 - pr : 0;
+        var pct = historyMode === "pct";
+        // percent: every bar is the whole audience; votes: bars share one scale
+        track.innerHTML =
+          '<span class="hrow-bar" style="width:' + (pct ? 100 : 100 * total / max) + '%">' +
+          '<span class="hrow-seg hrow-seg--red" style="flex-grow:' + r.red + '">' + (pct ? pr + "%" : r.red) + "</span>" +
+          '<span class="hrow-seg hrow-seg--blue" style="flex-grow:' + r.blue + '">' + (pct ? pb + "%" : r.blue) + "</span></span>";
+        track.title = r.ev.name + ": Red Rocker " + r.red + " (" + pr + "%), Blue Bomber " + r.blue + " (" + pb + "%), " + total + " votes";
+        li.setAttribute("aria-label", track.title);
+      }
+      li.appendChild(logo);
+      li.appendChild(track);
+      list.appendChild(li);
+    });
+  }
+  if (voteHistory && voteHistory.length) {
+    document.querySelectorAll(".history-toggle button").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        historyMode = btn.getAttribute("data-mode");
+        document.querySelectorAll(".history-toggle button").forEach(function (b) { b.setAttribute("aria-pressed", String(b === btn)); });
+        if (historyData) renderHistory();
+      });
+    });
+    fetch(DEMO ? "data/votes.csv" : API + "/votes.csv").then(function (r) { return r.text(); }).then(function (text) {
+      historyData = tallyVoteHistory(voteHistory, parseVoteCsv(text));
+      $("history").hidden = false;
+      renderHistory();
+    }).catch(function () {});
+  }
+
   // ---------- start-up ----------
   var already = getStore("robotVote");
   if (already === "red" || already === "blue") markVoted(already);

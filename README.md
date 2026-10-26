@@ -58,6 +58,16 @@ Use **Reset my vote** in the striped banner to vote again. Local test votes go t
 
 To test the Worker itself without touching live data: `npx wrangler dev` in `worker/` (local database), then point `config.js` at `http://localhost:8787`.
 
+## Round by round panel and social images
+
+`window.VOTE_HISTORY` in `config.js` lists each audience in order. LinkedIn is the seed votes; every event
+counts web votes between its `from` and `until` (the event day plus 4 days after). Votes outside every window
+are ignored. Before `from`, an event shows as a "coming up" box with its `date`. Logos are one-colour
+stencils in `assets/logo-*.png`; an event with no `logo` shows its name instead.
+
+`share.html?format=landscape` (1200 x 628) and `share.html?format=portrait` (1080 x 1350) draw the same
+data as social images. Screenshot them at 2x for 2400 x 1256 and 2160 x 2700 PNGs.
+
 ## Publishing changes
 
 `index.html` loads `styles.css`, `config.js` and `app.js` with a `?v=` version number. Bump it whenever those files change,
@@ -68,7 +78,9 @@ or visitors' browsers may keep using their saved copies for a while.
 | File | What it is |
 |---|---|
 | `index.html`, `styles.css`, `app.js` | The page |
-| `config.js` | The Worker address |
+| `config.js` | The Worker address, talk banner and round-by-round events |
+| `history.js` | Counts votes per audience (used by the page and `share.html`) |
+| `share.html` | Landscape and portrait social images of the round-by-round results |
 | `assets/` | Robot cut-outs, keynote photo, social share image, favicon |
 | `data/votes.csv` | Vote log (kept up to date by the GitHub Action) |
 | `worker/` | Cloudflare Worker code and config |

@@ -406,3 +406,49 @@ main { max-width: 760px; margin: 0 auto; padding: 0 16px; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 .has-voted .foot { padding-bottom: calc(90px + env(safe-area-inset-bottom)); }
+
+/* ---------- round by round (votes per audience) ---------- */
+.history[hidden] { display: none; }
+.history-lede { margin: 0 0 14px; color: var(--ink-soft); font-size: 16px; }
+.history-head { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.history-key { display: flex; flex-wrap: wrap; gap: 4px 16px; font-weight: 800; font-size: 14px; }
+.history-key em { font-style: normal; font-weight: 600; color: var(--ink-soft); }
+.key-swatch { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+.key-swatch--red { background: var(--red); }
+.key-swatch--blue { background: var(--teal); }
+.history-toggle { display: inline-flex; border: 2px solid var(--ink); border-radius: 999px; overflow: hidden; }
+.history-toggle button {
+  appearance: none; border: 0; background: #fff; color: var(--ink); cursor: pointer;
+  font-family: var(--display); font-size: 17px; letter-spacing: 0.05em; padding: 6px 14px 4px; min-height: 36px;
+}
+.history-toggle button[aria-pressed="true"] { background: var(--ink); color: var(--yellow); }
+.history-rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.hrow { display: grid; grid-template-columns: 76px 1fr; gap: 12px; align-items: center; min-height: 44px; }
+.hrow-logo { height: 34px; display: flex; align-items: center; }
+.hrow-logo i {
+  display: block; width: 26px; height: 26px; background: var(--ink);
+  -webkit-mask: var(--logo) left center / contain no-repeat; mask: var(--logo) left center / contain no-repeat;
+}
+.hrow-name { font-family: var(--display); font-size: 17px; line-height: 0.95; letter-spacing: 0.03em; }
+.hrow-track { position: relative; display: flex; height: 40px; align-items: stretch; }
+.hrow-bar {
+  display: flex; height: 100%; transition: width 0.5s cubic-bezier(.3,1.1,.4,1);
+  border: 3px solid var(--ink); border-radius: 10px; overflow: hidden; box-shadow: 3px 3px 0 var(--ink); box-sizing: border-box;
+}
+.hrow-seg {
+  flex: 1 1 0; display: flex; align-items: center; min-width: 0; overflow: hidden; white-space: nowrap;
+  font-family: var(--display); font-size: 22px; letter-spacing: 0.03em; color: #fff;
+}
+.hrow-seg--red { background: var(--red); justify-content: flex-start; padding-left: 8px; border-right: 3px solid var(--ink); }
+.hrow-seg--blue { background: var(--teal); justify-content: flex-end; padding-right: 8px; }
+.hrow--soon .hrow-track {
+  border: 3px dashed var(--ink); border-radius: 10px; justify-content: center; align-items: center;
+  background: repeating-linear-gradient(45deg, #fff 0 8px, #fff8cc 8px 16px);
+  font-family: var(--display); font-size: 19px; letter-spacing: 0.04em; color: var(--ink);
+}
+.hrow--soon .hrow-track small { font-family: var(--body); font-size: 13px; font-weight: 700; color: var(--ink-soft); margin-left: 8px; letter-spacing: 0; }
+.history-note { margin: 16px 0 0; font-size: 13px; color: var(--ink-soft); }
+/* 50% line in percent mode */
+.history.is-pct .hrow:not(.hrow--soon) .hrow-track::after {
+  content: ""; position: absolute; left: 50%; top: -4px; bottom: -4px; border-left: 2px dashed var(--ink); opacity: 0.55; pointer-events: none;
+}
