@@ -355,3 +355,4 @@ vote_id,timestamp_utc,robot,robot_label,country,region,city,event,source
 357,2026-10-24T17:48:43.878Z,red,Red Rocker (AI is too dangerous),US,New York,New York City,,web
 358,2026-10-25T16:47:10.215Z,blue,Blue Bomber (This AI tech is amazing),IT,Veneto,Mestre,,web
 359,2026-10-26T20:50:53.142Z,red,Red Rocker (AI is too dangerous),US,Texas,Austin,,web
+360,2026-10-27T10:12:52.010Z,blue,Blue Bomber (This AI tech is amazing),IE,Leinster,Raheny,,web
