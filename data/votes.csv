@@ -356,3 +356,34 @@ vote_id,timestamp_utc,robot,robot_label,country,region,city,event,source
 358,2026-10-25T16:47:10.215Z,blue,Blue Bomber (This AI tech is amazing),IT,Veneto,Mestre,,web
 359,2026-10-26T20:50:53.142Z,red,Red Rocker (AI is too dangerous),US,Texas,Austin,,web
 360,2026-10-27T10:12:52.010Z,blue,Blue Bomber (This AI tech is amazing),IE,Leinster,Raheny,,web
+361,2026-10-27T18:57:45.056Z,red,Red Rocker (AI is too dangerous),US,Texas,Irving,,web
+362,2026-10-27T18:57:47.603Z,red,Red Rocker (AI is too dangerous),US,California,Sunnyvale,,web
+363,2026-10-27T18:57:52.450Z,red,Red Rocker (AI is too dangerous),US,California,San Jose,,web
+364,2026-10-27T18:57:52.711Z,red,Red Rocker (AI is too dangerous),US,Texas,Dallas,,web
+365,2026-10-27T18:57:55.478Z,red,Red Rocker (AI is too dangerous),US,Virginia,Ashburn,,web
+366,2026-10-27T18:57:55.458Z,blue,Blue Bomber (This AI tech is amazing),US,California,Oakland,,web
+367,2026-10-27T18:57:56.342Z,blue,Blue Bomber (This AI tech is amazing),US,California,Oakland,,web
+368,2026-10-27T18:57:56.358Z,red,Red Rocker (AI is too dangerous),US,California,San Francisco,,web
+369,2026-10-27T18:57:56.580Z,red,Red Rocker (AI is too dangerous),US,California,Sacramento,,web
+370,2026-10-27T18:58:00.920Z,blue,Blue Bomber (This AI tech is amazing),US,Texas,Dallas,,web
+371,2026-10-27T18:58:03.151Z,blue,Blue Bomber (This AI tech is amazing),US,Texas,Dallas,,web
+372,2026-10-27T18:58:05.261Z,blue,Blue Bomber (This AI tech is amazing),US,Texas,Dallas,,web
+373,2026-10-27T18:58:05.695Z,red,Red Rocker (AI is too dangerous),US,California,Sunnyvale,,web
+374,2026-10-27T18:58:08.756Z,red,Red Rocker (AI is too dangerous),US,Texas,Dallas,,web
+375,2026-10-27T18:58:13.036Z,red,Red Rocker (AI is too dangerous),US,Texas,Dallas,,web
+376,2026-10-27T18:58:18.053Z,red,Red Rocker (AI is too dangerous),US,Texas,Dallas,,web
+377,2026-10-27T18:58:19.679Z,red,Red Rocker (AI is too dangerous),US,Washington,Seattle,,web
+378,2026-10-27T18:58:50.598Z,blue,Blue Bomber (This AI tech is amazing),US,Texas,Dallas,,web
+379,2026-10-27T18:58:52.173Z,blue,Blue Bomber (This AI tech is amazing),US,Texas,Dallas,,web
+380,2026-10-27T18:58:52.390Z,red,Red Rocker (AI is too dangerous),US,California,Sunnyvale,,web
+381,2026-10-27T18:59:00.028Z,blue,Blue Bomber (This AI tech is amazing),US,California,San Francisco,,web
+382,2026-10-27T18:59:02.628Z,red,Red Rocker (AI is too dangerous),US,Texas,Dallas,,web
+383,2026-10-27T18:59:02.629Z,blue,Blue Bomber (This AI tech is amazing),US,Washington,Seattle,,web
+384,2026-10-27T18:59:07.344Z,red,Red Rocker (AI is too dangerous),US,California,San Francisco,,web
+385,2026-10-27T18:59:07.689Z,blue,Blue Bomber (This AI tech is amazing),US,Texas,Dallas,,web
+386,2026-10-27T18:59:09.724Z,red,Red Rocker (AI is too dangerous),US,California,Sunnyvale,,web
+387,2026-10-27T18:59:12.031Z,red,Red Rocker (AI is too dangerous),US,California,Sunnyvale,,web
+388,2026-10-27T18:59:14.166Z,red,Red Rocker (AI is too dangerous),US,California,San Francisco,,web
+389,2026-10-27T19:04:07.313Z,blue,Blue Bomber (This AI tech is amazing),US,Texas,Dallas,,web
+390,2026-10-27T19:14:40.770Z,red,Red Rocker (AI is too dangerous),US,California,San Francisco,,web
+391,2026-10-27T19:29:46.917Z,blue,Blue Bomber (This AI tech is amazing),US,Texas,Dallas,,web
