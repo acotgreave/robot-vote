@@ -392,3 +392,5 @@ vote_id,timestamp_utc,robot,robot_label,country,region,city,event,source
 394,2026-10-27T20:17:22.871Z,blue,Blue Bomber (This AI tech is amazing),US,Washington,Seattle,,web
 395,2026-10-27T20:30:50.846Z,red,Red Rocker (AI is too dangerous),US,California,Sunnyvale,,web
 396,2026-10-27T21:01:40.702Z,blue,Blue Bomber (This AI tech is amazing),US,Texas,Dallas,,web
+397,2026-10-28T01:13:56.820Z,red,Red Rocker (AI is too dangerous),US,California,San Bruno,,web
+398,2026-10-28T02:22:08.609Z,blue,Blue Bomber (This AI tech is amazing),US,California,Sunnyvale,,web
