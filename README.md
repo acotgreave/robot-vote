@@ -62,7 +62,7 @@ To test the Worker itself without touching live data: `npx wrangler dev` in `wor
 
 `window.VOTE_HISTORY` in `config.js` lists each audience in order. LinkedIn is the seed votes; every event
 counts web votes between its `from` and `until` (the event day plus 4 days after). Votes outside every window
-are ignored. Before `from`, an event shows as a "coming up" box with its `date`. Logos are one-colour
+go to the `other: true` entry, shown as "Other" at the bottom. Before `from`, an event shows as a "coming up" box with its `date`. Logos are one-colour
 stencils in `assets/logo-*.png`; an event with no `logo` shows its name instead.
 
 `share.html?format=landscape` (1200 x 628) and `share.html?format=portrait` (1080 x 1350) draw the same

@@ -21,19 +21,27 @@
 
   // An event counts web votes between its `from` and `until`; before `from` it is "coming up",
   // and once open it says "voting now" until its first vote arrives.
+  // An entry with `other: true` collects every web vote that falls outside all event windows.
   window.tallyVoteHistory = function (events, votes) {
     var now = Date.now();
+    var windows = events.filter(function (ev) { return ev.from || ev.until; }).map(function (ev) {
+      return [ev.from ? Date.parse(ev.from) : 0, ev.until ? Date.parse(ev.until) : Infinity];
+    });
+    function inAnyWindow(t) { return windows.some(function (w) { return t >= w[0] && t <= w[1]; }); }
     return events.map(function (ev) {
       var from = ev.from ? Date.parse(ev.from) : 0, to = ev.until ? Date.parse(ev.until) : Infinity;
       var row = { ev: ev, red: 0, blue: 0, soon: !!ev.from && now < from };
       if (row.soon) return row;
       votes.forEach(function (v) {
         if (v.robot !== "red" && v.robot !== "blue") return;
-        var t = Date.parse(v.ts);
-        if (ev.seed ? v.source === "seed" : (v.source === "web" && t >= from && t <= to)) row[v.robot]++;
+        var t = Date.parse(v.ts), hit;
+        if (ev.seed) hit = v.source === "seed";
+        else if (ev.other) hit = v.source === "web" && !inAnyWindow(t);
+        else hit = v.source === "web" && t >= from && t <= to;
+        if (hit) row[v.robot]++;
       });
       // window open but nobody has voted yet: show "voting now" rather than an empty bar
-      if (!ev.seed && row.red + row.blue === 0 && now <= to) { row.soon = true; row.live = true; }
+      if (!ev.seed && !ev.other && row.red + row.blue === 0 && now <= to) { row.soon = true; row.live = true; }
       return row;
     });
   };
