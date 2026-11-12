@@ -169,7 +169,8 @@
         if (r.ev.logo) {
           var i = document.createElement("i");
           i.style.setProperty("--logo", "url('" + r.ev.logo + "')");
-          sizeVoteLogo(i, r.ev.logo, logoArea, logoMax);
+          var ls = r.ev.logoScale || 1;
+          sizeVoteLogo(i, r.ev.logo, logoArea * ls * ls, logoMax * ls);
           logo.appendChild(i);
         } else {
           logo.innerHTML = '<span class="hrow-name">' + r.ev.name + "</span>";

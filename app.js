@@ -223,19 +223,25 @@
     $("talk").setAttribute("aria-label", kicker + ": " + detail);
     $("talkKicker").textContent = kicker;
     $("talkDetail").textContent = detail;
-    // Animate only once the icon is actually on screen, or it can finish unseen on slower loads.
-    $("talkIcon").onload = function () {
+    var animate = function () {
       if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
       if (talk.animation === "decode") {
-        this.classList.add("pop");
+        $("talkIcon").classList.add("pop");
         decode($("talkKicker"), kicker, 0);
         decode($("talkDetail"), detail, 250);
       } else {
-        this.classList.add("spin");
+        $("talkIcon").classList.add("spin");
       }
     };
-    if (talk.iconShape === "wordmark") $("talkIcon").classList.add("talk-icon--wordmark");
-    $("talkIcon").src = talk.icon;
+    if (talk.icon) {
+      // Animate only once the icon is actually on screen, or it can finish unseen on slower loads.
+      $("talkIcon").onload = animate;
+      if (talk.iconShape === "wordmark") $("talkIcon").classList.add("talk-icon--wordmark");
+      $("talkIcon").src = talk.icon;
+    } else {
+      $("talkIcon").hidden = true; // no logo: text only
+      setTimeout(animate, 300);
+    }
     $("talk").hidden = false;
     $("topbar").classList.add("has-talk");
   }
@@ -289,7 +295,8 @@
       if (r.ev.logo) {
         var i = document.createElement("i");
         i.style.setProperty("--logo", "url('" + r.ev.logo + "')");
-        sizeVoteLogo(i, r.ev.logo, 26 * 26, 30);
+        var ls = r.ev.logoScale || 1;
+        sizeVoteLogo(i, r.ev.logo, 26 * 26 * ls * ls, 30 * ls);
         logo.appendChild(i);
       } else {
         var nm = document.createElement("span");

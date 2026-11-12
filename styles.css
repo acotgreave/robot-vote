@@ -55,6 +55,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 400; letter-spacing: 0.02
   text-decoration: none; color: #fff;
 }
 .talk-icon { width: 34px; height: 34px; border-radius: 50%; flex: none; border: 2px solid #fff; }
+.talk-icon[hidden] { display: none; } /* the global img { display: block } would otherwise show a broken image */
 /* One spin of the compass shortly after the page opens, then it stays still. */
 /* A logo shown as plain lettering on the bar, instead of in a round badge */
 .talk-icon--wordmark { width: auto; height: 30px; border: 0; border-radius: 0; }
