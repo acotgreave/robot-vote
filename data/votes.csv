@@ -454,3 +454,12 @@ vote_id,timestamp_utc,robot,robot_label,country,region,city,event,source
 456,2026-11-05T10:45:39.283Z,red,Red Rocker (AI is too dangerous),GB,England,Worcester,,web
 457,2026-11-09T16:47:36.384Z,blue,Blue Bomber (This AI tech is amazing),GB,England,London,,web
 458,2026-11-12T17:54:51.231Z,blue,Blue Bomber (This AI tech is amazing),US,Colorado,Highlands Ranch,,web
+459,2026-11-12T18:37:10.512Z,red,Red Rocker (AI is too dangerous),US,Arizona,Queen Creek,,web
+460,2026-11-12T18:37:15.640Z,blue,Blue Bomber (This AI tech is amazing),US,Tennessee,Nashville,,web
+461,2026-11-12T18:37:15.760Z,blue,Blue Bomber (This AI tech is amazing),US,Colorado,Denver,,web
+462,2026-11-12T18:37:17.271Z,blue,Blue Bomber (This AI tech is amazing),US,Texas,San Antonio,,web
+463,2026-11-12T18:37:18.487Z,blue,Blue Bomber (This AI tech is amazing),US,Texas,Austin,,web
+464,2026-11-12T18:37:23.127Z,red,Red Rocker (AI is too dangerous),EE,Harjumaa,Tallinn,,web
+465,2026-11-12T18:37:37.686Z,red,Red Rocker (AI is too dangerous),US,Ohio,Columbus,,web
+466,2026-11-12T18:37:39.345Z,blue,Blue Bomber (This AI tech is amazing),US,California,Ventura,,web
+467,2026-11-12T18:37:50.625Z,blue,Blue Bomber (This AI tech is amazing),US,Texas,Schertz,,web
