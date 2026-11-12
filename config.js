@@ -23,6 +23,6 @@ window.VOTE_HISTORY = [
   { name: "Compass Tech Summit", logo: "assets/logo-compass.png", date: "2 Oct", from: "2026-10-01T00:00:00+02:00", until: "2026-10-06T23:59:59+02:00" },
   { name: "Data Decoded", logo: "assets/logo-datadecoded.png", date: "14 Oct", from: "2026-10-14T00:00:00+01:00", until: "2026-10-18T23:59:59+01:00" },
   { name: "Hex Prompt", logo: "assets/logo-hex.png", date: "27 Oct", from: "2026-10-27T00:00:00-07:00", until: "2026-10-31T23:59:59-07:00" },
-  { name: "Austin Tableau User Group", logo: "assets/logo-tableau.png", logoScale: 1.3, date: "12 Nov", from: "2026-11-12T00:00:00-06:00", until: "2026-11-16T23:59:59-06:00" },
+  { name: "Austin Tableau User Group", short: "Austin TUG", logo: "assets/logo-tableau.png", logoScale: 1.3, date: "12 Nov", from: "2026-11-12T00:00:00-06:00", until: "2026-11-16T23:59:59-06:00" },
   { name: "DSC Europe", logo: "", date: "27 Nov", from: "2026-11-27T00:00:00+01:00", until: "2026-12-01T23:59:59+01:00" }
 ];

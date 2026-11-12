@@ -67,6 +67,8 @@ stencils in `assets/logo-*.png`; an event with no `logo` shows its name instead.
 
 `share.html?format=landscape` (1200 x 628) and `share.html?format=portrait` (1080 x 1350) draw the same
 data as social images. Screenshot them at 2x for 2400 x 1256 and 2160 x 2700 PNGs.
+Add `&focus=austin&callout=Austin%20TUG%3A%20your%20turn%20tonight!` to spotlight one event (its row is
+highlighted; an event's optional `short` name is used in the callout and the "Next rounds" line).
 
 ## Publishing changes
 

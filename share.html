@@ -9,6 +9,7 @@
     Social images for the "Round by round" results, drawn from live votes.
       share.html?format=landscape   1200 x 628  (screenshot at 2x for 2400 x 1256)
       share.html?format=portrait    1080 x 1350 (screenshot at 2x for 2160 x 2700)
+    Add &focus=<part of an event name>&callout=<text> to spotlight one event's row.
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -91,20 +92,20 @@
     .card--landscape .s-cta { height: 64px; margin: 18px -40px 0; font-size: 30px; }
 
     .card--portrait .s-kicker { font-size: 30px; }
-    .card--portrait .s-title { font-size: 80px; }
-    .card--portrait .s-robots { height: 300px; justify-content: center; align-self: center; margin: 16px 0 22px; gap: 10px; }
+    .card--portrait .s-title { font-size: 76px; }
+    .card--portrait .s-robots { height: 280px; justify-content: center; align-self: center; margin: 12px 0 20px; gap: 10px; }
     .card--portrait .s-name { font-size: 28px; }
     .card--portrait .s-bubble { font-size: 31px; width: 220px; height: 82px; padding: 8px 10px 5px; box-sizing: border-box; }
     .card--portrait .s-vs { font-size: 60px; margin: 0 18px 90px; }
     .card--portrait .s-panel { padding: 30px 32px 28px; }
     .card--portrait .s-panel h2 { font-size: 54px; }
     .card--portrait .s-panel .history-key { font-size: 20px; }
-    .card--portrait .history-rows { gap: 16px; }
-    .card--portrait .s-panel .hrow { grid-template-columns: 100px 1fr; min-height: 60px; }
-    .card--portrait .s-panel .hrow-track { height: 60px; }
+    .card--portrait .history-rows { gap: 12px; }
+    .card--portrait .s-panel .hrow { grid-template-columns: 100px 1fr; min-height: 56px; }
+    .card--portrait .s-panel .hrow-track { height: 56px; }
     .card--portrait .s-panel .hrow-seg { font-size: 36px; }
     .card--portrait .s-callout { font-size: 28px; }
-    .card--portrait .s-cta { height: 130px; margin-top: 30px; font-size: 44px; flex-direction: column; gap: 2px; line-height: 1.05; }
+    .card--portrait .s-cta { height: 130px; margin-top: 24px; font-size: 44px; flex-direction: column; gap: 2px; line-height: 1.05; }
     .card--portrait .s-cta > b { display: block; }
     .card--portrait .s-cta span { font-size: 26px; color: #fff; opacity: .85; }
   </style>
@@ -147,7 +148,8 @@
   <script>
   (function () {
     "use strict";
-    var format = new URLSearchParams(location.search).get("format") === "portrait" ? "portrait" : "landscape";
+    var params = new URLSearchParams(location.search);
+    var format = params.get("format") === "portrait" ? "portrait" : "landscape";
     var card = document.getElementById("card");
     card.classList.add("card--" + format);
     // portrait stacks intro, robots, panel and CTA; landscape puts the panel beside the intro
@@ -189,17 +191,26 @@
         r.li = li;
       });
 
-      // Call out an audience that broke from the rest (the only one where Blue won)
-      var done = rows.filter(function (r) { return !r.soon && r.red + r.blue > 0; });
-      var blueWins = done.filter(function (r) { return r.blue > r.red; });
-      if (blueWins.length === 1 && done.length > 2) {
-        var c = document.getElementById("callout");
-        c.textContent = "Only " + blueWins[0].ev.name.replace(" Tech Summit", "") + " backed the Blue Bomber!";
+      var c = document.getElementById("callout");
+      var focus = (params.get("focus") || "").toLowerCase();
+      var focused = focus && rows.filter(function (r) { return r.ev.name.toLowerCase().indexOf(focus) !== -1; })[0];
+      if (focused) {
+        // Promoting one event: highlight its row, with the callout from the URL (or a default)
+        c.textContent = params.get("callout") || "Your turn, " + (focused.ev.short || focused.ev.name) + "!";
         c.hidden = false;
-        blueWins[0].li.classList.add("is-called");
+        focused.li.classList.add("is-called");
+      } else {
+        // Otherwise call out an audience that broke from the rest (the only one where Blue won)
+        var done = rows.filter(function (r) { return !r.soon && r.red + r.blue > 0; });
+        var blueWins = done.filter(function (r) { return r.blue > r.red; });
+        if (blueWins.length === 1 && done.length > 2) {
+          c.textContent = "Only " + blueWins[0].ev.name.replace(" Tech Summit", "") + " backed the Blue Bomber!";
+          c.hidden = false;
+          blueWins[0].li.classList.add("is-called");
+        }
       }
 
-      var soon = rows.filter(function (r) { return r.soon; }).map(function (r) { return r.ev.name + " " + r.ev.date; });
+      var soon = rows.filter(function (r) { return r.soon; }).map(function (r) { return (r.ev.short || r.ev.name) + " " + r.ev.date; });
       if (soon.length && format === "portrait") document.getElementById("ctaSub").textContent = "Next rounds: " + soon.join(" · ");
       document.body.setAttribute("data-ready", "1");
     });
