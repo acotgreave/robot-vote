@@ -335,6 +335,9 @@
     });
     fetch(DEMO ? "data/votes.csv" : API + "/votes.csv").then(function (r) { return r.text(); }).then(function (text) {
       historyData = tallyVoteHistory(voteHistory, parseVoteCsv(text));
+      // total of the votes shown in the bars (votes cast between events aren't in any bar)
+      var shown = historyData.reduce(function (n, r) { return n + r.red + r.blue; }, 0);
+      $("historyTotal").textContent = " (Total votes: " + shown.toLocaleString() + ")";
       $("history").hidden = false;
       renderHistory();
     }).catch(function () {});
