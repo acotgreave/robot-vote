@@ -19,7 +19,8 @@
     });
   };
 
-  // An event counts web votes between its `from` and `until`; before `from` it is "coming up".
+  // An event counts web votes between its `from` and `until`; before `from` it is "coming up",
+  // and once open it says "voting now" until its first vote arrives.
   window.tallyVoteHistory = function (events, votes) {
     var now = Date.now();
     return events.map(function (ev) {
@@ -31,6 +32,8 @@
         var t = Date.parse(v.ts);
         if (ev.seed ? v.source === "seed" : (v.source === "web" && t >= from && t <= to)) row[v.robot]++;
       });
+      // window open but nobody has voted yet: show "voting now" rather than an empty bar
+      if (!ev.seed && row.red + row.blue === 0 && now <= to) { row.soon = true; row.live = true; }
       return row;
     });
   };

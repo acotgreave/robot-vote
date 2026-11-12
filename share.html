@@ -177,7 +177,7 @@
         var track = document.createElement("div");
         track.className = "hrow-track";
         if (r.soon) {
-          track.innerHTML = r.ev.date + "<small>coming up</small>";
+          track.innerHTML = r.ev.date + "<small>" + (r.live ? "voting now" : "coming up") + "</small>";
         } else {
           var pr = total ? Math.round(100 * r.red / total) : 0;
           track.innerHTML = '<span class="hrow-bar" style="width:100%">' +

@@ -300,8 +300,8 @@
       var track = document.createElement("div");
       track.className = "hrow-track";
       if (r.soon) {
-        track.innerHTML = r.ev.date + "<small>coming up</small>";
-        li.setAttribute("aria-label", r.ev.name + ": coming up, " + r.ev.date);
+        track.innerHTML = r.ev.date + "<small>" + (r.live ? "voting now" : "coming up") + "</small>";
+        li.setAttribute("aria-label", r.ev.name + ": " + (r.live ? "voting now" : "coming up") + ", " + r.ev.date);
       } else {
         var pr = total ? Math.round(100 * r.red / total) : 0, pb = total ? 100 - pr : 0;
         var pct = historyMode === "pct";
