@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Round by round | Live</title>
+  <!--
+    Live "Round by round" results for a slide. Designed at 1600 x 900 (16:9) and scaled to fit
+    whatever box it is shown in (e.g. PowerPoint's Web Viewer add-in). Refreshes every 10 seconds.
+      live.html?focus=dsc   highlight the event whose name contains "dsc"
+      live.html?e=dsc       the QR code tags votes with that event
+      live.html?qr=0        hide the QR code
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; }
+    body { display: grid; place-items: center; }
+    .stage {
+      position: absolute; left: 50%; top: 50%; width: 1600px; height: 900px; box-sizing: border-box;
+      transform-origin: 0 0; padding: 44px 56px 0; display: grid; grid-template-columns: 1fr 300px; grid-template-rows: auto 1fr auto; column-gap: 40px;
+    }
+    .l-head { grid-column: 1 / -1; display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 18px; }
+    .l-title { font-family: var(--display); font-weight: 400; font-size: 78px; line-height: 0.95; margin: 0; color: var(--ink); text-shadow: 4px 4px 0 var(--yellow); }
+    .l-sub { margin: 6px 0 0; font-size: 24px; color: var(--ink-soft); }
+    .l-live {
+      display: inline-flex; align-items: center; gap: 10px; font-family: var(--display); font-size: 30px; letter-spacing: 0.06em;
+      background: var(--ink); color: var(--yellow); padding: 8px 18px 5px; border-radius: 10px; transform: rotate(-2deg); white-space: nowrap;
+    }
+    .l-live i { width: 16px; height: 16px; border-radius: 50%; background: #ff3b3b; animation: blink 1.4s ease-in-out infinite; }
+    .l-live.is-stale i { background: #888; animation: none; }
+    @keyframes blink { 50% { opacity: 0.25; } }
+
+    .l-panel { margin: 0; padding: 26px 32px 22px; align-self: stretch; display: flex; flex-direction: column; }
+    .l-panel .history-key { font-size: 22px; margin: 0 0 18px; gap: 6px 28px; }
+    .l-panel .key-swatch { width: 16px; height: 16px; }
+    .l-panel .history-rows { flex: 1; gap: 12px; align-content: start; }
+    .l-panel .hrow { grid-template-columns: 120px 1fr; gap: 20px; min-height: 58px; position: relative; }
+    .l-panel .hrow-logo { height: 52px; }
+    .l-panel .hrow-name { font-size: 28px; }
+    .l-panel .hrow-track { height: 58px; }
+    .l-panel .hrow-seg { font-size: 38px; padding-left: 14px; padding-right: 14px; transition: flex-grow 1.2s cubic-bezier(.3,1.1,.4,1); }
+    .l-panel .hrow-seg--blue { padding-left: 0; }
+    .l-panel .hrow--soon .hrow-track { font-size: 32px; }
+    .l-panel .hrow--soon .hrow-track small { font-size: 20px; }
+    .l-panel .hrow.is-called::before {
+      content: ""; position: absolute; inset: -6px -12px -8px -14px; background: var(--yellow); border-radius: 12px; z-index: -1;
+    }
+    .l-panel .history-rows { position: relative; z-index: 0; }
+
+    .l-side { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; text-align: center; }
+    .l-side .l-total { font-family: var(--display); font-size: 120px; line-height: 0.9; color: var(--ink); }
+    .l-side .l-total-label { font-family: var(--display); font-size: 30px; letter-spacing: 0.05em; color: var(--ink-soft); margin-top: -6px; }
+    .l-qr { background: #fff; border: 4px solid var(--ink); border-radius: 16px; box-shadow: 6px 6px 0 var(--ink); padding: 14px; }
+    .l-qr img, .l-qr canvas { display: block; width: 220px; height: 220px; image-rendering: pixelated; }
+    .l-qr-label { font-family: var(--display); font-size: 30px; line-height: 1; letter-spacing: 0.04em; }
+
+    .l-foot {
+      grid-column: 1 / -1; margin: 22px -56px 0; height: 76px; display: flex; align-items: center; justify-content: center;
+      background: var(--ink); color: #fff; font-family: var(--display); font-size: 40px; letter-spacing: 0.05em;
+    }
+    .l-foot b { color: var(--yellow); font-weight: 400; margin-left: 14px; }
+  </style>
+</head>
+<body>
+  <div class="stage" id="stage">
+    <div class="l-head">
+      <div>
+        <h1 class="l-title">Which robot is winning?</h1>
+        <p class="l-sub">How each audience voted, round by round</p>
+      </div>
+      <span class="l-live" id="live"><i></i>Live results</span>
+    </div>
+
+    <section class="panel l-panel history is-pct" id="history">
+      <div class="history-key">
+        <span><b class="key-swatch key-swatch--red"></b>Red Rocker <em>AI is too dangerous</em></span>
+        <span><b class="key-swatch key-swatch--blue"></b>Blue Bomber <em>This AI tech is amazing</em></span>
+      </div>
+      <ol class="history-rows" id="historyRows"></ol>
+    </section>
+
+    <aside class="l-side">
+      <div>
+        <div class="l-total" id="total">&ndash;</div>
+        <div class="l-total-label">votes so far</div>
+      </div>
+      <div class="l-qr" id="qrBox"><div id="qr"></div></div>
+      <div class="l-qr-label" id="qrLabel">Scan to vote</div>
+    </aside>
+
+    <div class="l-foot">Cast your vote: <b>robot.howtospeakdata.com</b></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+  <script src="config.js"></script>
+  <script src="history.js"></script>
+  <script>
+  (function () {
+    "use strict";
+    var params = new URLSearchParams(location.search);
+    var $ = function (id) { return document.getElementById(id); };
+    var API = (window.ROBOT_API || "").replace(/\/+$/, "");
+    var EVENTS = window.VOTE_HISTORY || [];
+    var REFRESH_MS = 10000;
+
+    // ---- fit the 1600 x 900 stage into whatever box we're shown in ----
+    function fit() {
+      var s = Math.min(innerWidth / 1600, innerHeight / 900);
+      $("stage").style.transform = "scale(" + s + ") translate(-50%, -50%)";
+    }
+    addEventListener("resize", fit); fit();
+
+    // ---- QR code to the voting page ----
+    if (params.get("qr") === "0") { $("qrBox").hidden = true; $("qrLabel").hidden = true; }
+    else if (window.qrcode) {
+      var target = "https://robot.howtospeakdata.com/" + (params.get("e") ? "?e=" + encodeURIComponent(params.get("e")) : "");
+      var qr = qrcode(0, "M"); qr.addData(target); qr.make();
+      $("qr").innerHTML = qr.createImgTag(8, 0);
+    }
+
+    // ---- rows: built once, then updated in place so bars glide to new values ----
+    var focus = (params.get("focus") || "").toLowerCase();
+    var built = [];
+    function logoCell(ev) {
+      var logo = document.createElement("div");
+      logo.className = "hrow-logo";
+      if (ev.logo) {
+        var i = document.createElement("i");
+        i.style.setProperty("--logo", "url('" + ev.logo + "')");
+        sizeVoteLogo(i, ev.logo, 46 * 46 * Math.pow(ev.logoScale || 1, 2), 52);
+        logo.appendChild(i);
+      } else {
+        logo.innerHTML = '<span class="hrow-name"></span>';
+        logo.firstChild.textContent = ev.short || ev.name;
+      }
+      return logo;
+    }
+    function render(rows) {
+      var list = $("historyRows");
+      rows.forEach(function (r, idx) {
+        var state = r.soon ? (r.live ? "live" : "soon") : "bar";
+        var b = built[idx];
+        if (!b || b.state !== state) {
+          var li = document.createElement("li");
+          li.className = "hrow" + (r.soon ? " hrow--soon" : "");
+          if (focus && r.ev.name.toLowerCase().indexOf(focus) !== -1) li.classList.add("is-called");
+          li.appendChild(logoCell(r.ev));
+          var track = document.createElement("div");
+          track.className = "hrow-track";
+          if (r.soon) track.innerHTML = r.ev.date + "<small>" + (r.live ? "voting now" : "coming up") + "</small>";
+          else track.innerHTML = '<span class="hrow-bar" style="width:100%"><span class="hrow-seg hrow-seg--red" style="flex-grow:1"></span><span class="hrow-seg hrow-seg--blue" style="flex-grow:1"></span></span>';
+          li.appendChild(track);
+          if (b) list.replaceChild(li, b.li); else list.appendChild(li);
+          b = built[idx] = { li: li, state: state };
+          if (state === "bar") requestAnimationFrame(function () { update(b, r); }); // let new bars grow in
+          else return;
+        }
+        if (state === "bar") update(b, r);
+      });
+    }
+    function update(b, r) {
+      var total = r.red + r.blue, pr = total ? Math.round(100 * r.red / total) : 0;
+      var segs = b.li.querySelectorAll(".hrow-seg");
+      segs[0].style.flexGrow = r.red; segs[0].textContent = pr + "%";
+      segs[1].style.flexGrow = r.blue; segs[1].textContent = (100 - pr) + "%";
+      b.li.setAttribute("aria-label", r.ev.name + ": Red Rocker " + pr + "%, Blue Bomber " + (100 - pr) + "%, " + total + " votes");
+    }
+
+    function refresh() {
+      fetch(API + "/votes.csv", { cache: "no-store" }).then(function (r) {
+        if (!r.ok) throw new Error(r.status); return r.text();
+      }).then(function (text) {
+        var rows = tallyVoteHistory(EVENTS, parseVoteCsv(text));
+        render(rows);
+        var total = rows.reduce(function (n, r) { return n + r.red + r.blue; }, 0);
+        $("total").textContent = total.toLocaleString();
+        $("live").classList.remove("is-stale");
+        document.body.setAttribute("data-ready", "1");
+      }).catch(function () {
+        $("live").classList.add("is-stale"); // keep showing the last good numbers
+      });
+    }
+    refresh();
+    setInterval(refresh, REFRESH_MS);
+    // catch up straight away when the slide (or tab) comes back into view
+    document.addEventListener("visibilitychange", function () { if (!document.hidden) refresh(); });
+  })();
+  </script>
+</body>
+</html>

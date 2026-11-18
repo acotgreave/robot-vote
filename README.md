@@ -70,6 +70,13 @@ data as social images. Screenshot them at 2x for 2400 x 1256 and 2160 x 2700 PNG
 Add `&focus=austin&callout=Austin%20TUG%3A%20your%20turn%20tonight!` to spotlight one event (its row is
 highlighted; an event's optional `short` name is used in the callout and the "Next rounds" line).
 
+## Live chart for slides
+
+`live.html` is the round-by-round chart as a 16:9 slide (1600 x 900, scaled to fit its box) that refreshes
+every 10 seconds, with a QR code to vote. In PowerPoint: Insert > Get Add-ins > "Web Viewer", then give it
+`https://robot.howtospeakdata.com/live.html?focus=dsc&e=dsc` (`focus` highlights an event's row, `e` tags
+votes cast via the QR code, `qr=0` hides the QR code).
+
 ## Publishing changes
 
 `index.html` loads `styles.css`, `config.js` and `app.js` with a `?v=` version number. Bump it whenever those files change,
