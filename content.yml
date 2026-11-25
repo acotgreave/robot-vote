@@ -57,9 +57,7 @@ about:
 
 # The bar pinned to the bottom of the screen after voting
 sticky_bar:
-  label: "Follow Andy"
-  linkedin: "LinkedIn"
-  substack: "Substack"
+  linkedin: "Follow Andy on LinkedIn"
 
 footer:
   privacy: "Your vote is stored with the time and a rough location (country and city) worked out from your connection. No names, emails or IP addresses are kept."
@@ -71,4 +69,3 @@ links:
   linkedin: "https://www.linkedin.com/in/acotgreave/"
   writeup: "https://howtospeakdata.substack.com/p/why-human-insight-is-more-important?utm_source=robot&utm_medium=keynote&utm_content=after-vote"
   book_call: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1p0qUydPTMO3RcjmcLY5Vw37-KiAuzNtrpuIF1clypBsru3p6l2uKK_EcFu4OqUElF9TsqWOcq"
-  substack_subscribe: "https://howtospeakdata.substack.com/subscribe?utm_source=robot&utm_medium=keynote&utm_content=sticky"

@@ -301,19 +301,17 @@ main { max-width: 760px; margin: 0 auto; padding: 0 16px; }
   transform: translateY(110%); transition: transform 0.3s ease;
 }
 .sticky.show { transform: none; }
-.sticky-label { font-family: var(--display); color: var(--yellow); font-size: 19px; line-height: 0.95; letter-spacing: 0.04em; width: 3.6em; }
 .sticky-btn {
   flex: 1; display: flex; align-items: center; justify-content: center; min-height: 46px;
   border-radius: 10px; border: 2px solid #fff; text-decoration: none; color: #fff;
   font-family: var(--display); font-size: 20px; letter-spacing: 0.05em; padding: 4px 8px 2px; text-align: center; line-height: 1;
 }
-.sticky-btn--linkedin { background: var(--linkedin); flex: 1.1; }
-.sticky-btn--substack { background: var(--substack); }
+.sticky-btn--linkedin { background: var(--linkedin); font-size: 22px; }
 .sticky-close {
   appearance: none; background: none; border: 0; color: #fff; font-size: 28px; line-height: 1;
   width: 36px; height: 46px; padding: 0; cursor: pointer;
 }
-@media (min-width: 640px) { .sticky { justify-content: center; } .sticky-btn { flex: 0 1 240px; } }
+@media (min-width: 640px) { .sticky { justify-content: center; } .sticky-btn { flex: 0 1 360px; } }
 
 /* ---------- test mode ---------- */
 .testbar {
