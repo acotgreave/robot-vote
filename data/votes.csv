@@ -467,3 +467,5 @@ vote_id,timestamp_utc,robot,robot_label,country,region,city,event,source
 469,2026-11-17T09:59:06.670Z,red,Red Rocker (AI is too dangerous),GB,England,London,,web
 470,2026-11-20T18:03:29.465Z,blue,Blue Bomber (This AI tech is amazing),US,Texas,Lewisville,,web
 471,2026-11-21T01:19:24.698Z,blue,Blue Bomber (This AI tech is amazing),AU,New South Wales,Sydney,,web
+472,2026-11-25T11:01:31.964Z,red,Red Rocker (AI is too dangerous),RS,Central Serbia,Savski Venac,,test
+473,2026-11-25T11:19:37.478Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Savski Venac,,web
