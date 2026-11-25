@@ -77,6 +77,15 @@ every 10 seconds, with a QR code to vote. In PowerPoint: Insert > Get Add-ins > 
 `https://robot.howtospeakdata.com/live.html?focus=dsc&e=dsc` (`focus` highlights an event's row, `e` tags
 votes cast via the QR code, `qr=0` hides the QR code).
 
+## Editing the page text
+
+All the wording on the page, and where its buttons link, lives in `content.yml`. Edit it on GitHub
+(open the file, click the pencil, change the text, *Commit changes*) and the page shows the new text within
+about a minute. Elements in `index.html` carry `data-text`, `data-md` (allows `**bold**` / `*italics*`) or
+`data-href` keys matching the file; the HTML keeps the same text as a fallback if the file can't be read.
+Not in the file: messages written by `app.js` (e.g. "Vote counted!"), the talk banner and events (`config.js`),
+and `share.html` / `live.html`.
+
 ## Publishing changes
 
 `index.html` loads `styles.css`, `config.js` and `app.js` with a `?v=` version number. Bump it whenever those files change,
@@ -87,6 +96,7 @@ or visitors' browsers may keep using their saved copies for a while.
 | File | What it is |
 |---|---|
 | `index.html`, `styles.css`, `app.js` | The page |
+| `content.yml` | All the page wording and button links: edit this to change text |
 | `config.js` | The Worker address, talk banner and round-by-round events |
 | `history.js` | Counts votes per audience (used by the page and `share.html`) |
 | `share.html` | Landscape and portrait social images of the round-by-round results |

@@ -12,6 +12,48 @@
   var resultsEl = $("results");
   var hintEl = $("hint");
 
+  // ---------- editable text from content.yml ----------
+  // Elements carry data-text (plain), data-md (**bold** / *italics*) or data-href (link) keys
+  // such as "after_vote.heading". The HTML holds the same text as a fallback.
+  function pick(obj, path) {
+    return path.split(".").reduce(function (o, k) { return o == null ? o : o[k]; }, obj);
+  }
+  function miniMarkdown(str) {
+    var esc = String(str).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    return esc.replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/\*(.+?)\*/g, "<em>$1</em>");
+  }
+  function applyText(t) {
+    if (!t || typeof t !== "object") return;
+    document.querySelectorAll("[data-text]").forEach(function (el) {
+      var v = pick(t, el.getAttribute("data-text"));
+      if (typeof v !== "string" && typeof v !== "number") return;
+      // after voting, the vote buttons show "Your pick" (or nothing); leave them alone
+      if (el.classList.contains("vote-btn") && fightersEl.classList.contains("voted")) return;
+      el.textContent = v;
+    });
+    document.querySelectorAll("[data-md]").forEach(function (el) {
+      var v = pick(t, el.getAttribute("data-md"));
+      if (typeof v === "string") el.innerHTML = miniMarkdown(v);
+    });
+    document.querySelectorAll("[data-href]").forEach(function (el) {
+      var v = pick(t, el.getAttribute("data-href"));
+      if (typeof v === "string" && /^https?:\/\//.test(v)) el.href = v;
+    });
+    ["red", "blue"].forEach(function (c) {
+      var name = pick(t, "robots." + c + ".name"), says = pick(t, "robots." + c + ".says");
+      if (typeof name === "string") NAMES[c] = name;
+      var btn = document.querySelector('.fighter[data-robot="' + c + '"]');
+      if (btn) btn.setAttribute("aria-label", "Vote " + NAMES[c] + (typeof says === "string" ? ": " + says : ""));
+    });
+  }
+  if (window.jsyaml) {
+    fetch("content.yml", { cache: "no-cache" }).then(function (r) {
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.text();
+    }).then(function (y) { applyText(jsyaml.load(y)); })
+      .catch(function (e) { console.warn("content.yml not applied, keeping the built-in text:", e); });
+  }
+
   // ---------- storage (wrapped: private mode can throw) ----------
   function getStore(k) {
     try { var v = localStorage.getItem(k); if (v) return v; } catch (e) {}

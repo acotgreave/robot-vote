@@ -289,7 +289,7 @@ main { max-width: 760px; margin: 0 auto; padding: 0 16px; }
 .btn.btn--small { font-size: 19px; min-height: 44px; padding: 7px 14px 5px; box-shadow: 3px 3px 0 var(--ink); }
 .result-cta-next { margin: 18px 0 0; padding-top: 14px; border-top: 2px dashed rgba(22,22,26,.35); }
 .result-cta-next p { margin: 0 0 10px; font-size: 16px; font-weight: 700; }
-.result-cta-call { margin: 16px 0 0; font-size: 16px; font-weight: 700; }
+.result-cta-call { margin: 18px 0 0; padding-top: 14px; border-top: 2px dashed rgba(22,22,26,.35); font-size: 16px; font-weight: 700; }
 .result-cta-call a { font-weight: 800; white-space: nowrap; }
 
 /* ---------- sticky follow bar (after voting) ---------- */

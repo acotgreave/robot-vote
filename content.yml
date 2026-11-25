@@ -1,0 +1,74 @@
+# ============================================================================
+# Text on robot.howtospeakdata.com
+#
+# Edit any value below, save (or commit on GitHub), and the page shows it
+# within about a minute. Things to know:
+#   - Keep the indentation and the "key:" names exactly as they are.
+#   - Wrap text in "double quotes" if it contains a colon (:) or starts with
+#     a special character. When in doubt, quote it.
+#   - In paragraphs marked (markdown), **bold** and *italics* work.
+#   - If this file has a mistake, the page simply keeps its built-in text.
+# ============================================================================
+
+page:
+  kicker: "Andy Cotgreave wants to know…"
+  question: "Which robot is winning the battle in your head?"
+  hint: "Tap a robot to vote. One vote each, no sign-up needed."
+
+robots:
+  red:
+    name: "Red Rocker"
+    says: "AI is too dangerous"
+    button: "Vote red"
+  blue:
+    name: "Blue Bomber"
+    says: "This AI tech is amazing"
+    button: "Vote blue"
+
+# The yellow panel people see straight after voting
+after_vote:
+  heading: "Round 2: follow the fight!"
+  linkedin_pitch: "I'll post how every room votes, and who wins in the end, on LinkedIn."
+  linkedin_button: "Follow Andy on LinkedIn"
+  writeup_question: "Want the write-up of this talk, with every link and source?"
+  writeup_button: "Read the write-up →"
+  book_call_question: "Want this talk at your event?"
+  book_call_link: "Book a call"
+
+# The chart of how each audience voted
+results_chart:
+  title: "Round by round results"
+  subtitle: "How each audience voted"   # the total, e.g. "(Total votes: 449)", is added automatically
+  note: "LinkedIn votes come from earlier polls. Each event counts votes from its day and the 4 days after; all other votes are in Other."
+
+# "So, who is asking?" section
+about:
+  kicker: "So, who is asking?"
+  heading: "I'm Andy Cotgreave. I've spent 20 years helping people enjoy, not endure, data."
+  paragraph_1: "I help organisations make better decisions with data, and stay human while AI changes how we work. I do it three ways: **keynotes** that change how audiences think about data and AI; hands-on **workshops** that make data storytelling and dashboard design an everyday skill; and **mentoring** for analysts and leaders who want their work to land."   # (markdown)
+  paragraph_2: "It's built on more than 20 years in the field: analyst at the University of Oxford, 15 years at Tableau, co-author of *The Big Book of Dashboards* and *Dashboards That Deliver*, and host of *The AI Analyst?* and *Chart Chat*."   # (markdown)
+  question_1: "Want Andy to speak at your event?"
+  question_2: "Looking for data storytelling training?"
+  question_3: "Want to talk about A.I.?"
+  book_call_button: "Book a call"
+  keep_in_touch: "Or keep in touch"
+  linkedin_button: "Follow on LinkedIn"
+  newsletter_title: "Get the How To Speak Data newsletter"
+
+# The bar pinned to the bottom of the screen after voting
+sticky_bar:
+  label: "Follow Andy"
+  linkedin: "LinkedIn"
+  substack: "Substack"
+
+footer:
+  privacy: "Your vote is stored with the time and a rough location (country and city) worked out from your connection. No names, emails or IP addresses are kept."
+  votes_link: "See all the votes"
+  credit: "This site was created with Claude Code."
+
+# Where the buttons go
+links:
+  linkedin: "https://www.linkedin.com/in/acotgreave/"
+  writeup: "https://howtospeakdata.substack.com/p/why-human-insight-is-more-important?utm_source=robot&utm_medium=keynote&utm_content=after-vote"
+  book_call: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1p0qUydPTMO3RcjmcLY5Vw37-KiAuzNtrpuIF1clypBsru3p6l2uKK_EcFu4OqUElF9TsqWOcq"
+  substack_subscribe: "https://howtospeakdata.substack.com/subscribe?utm_source=robot&utm_medium=keynote&utm_content=sticky"
