@@ -354,15 +354,6 @@ main { max-width: 760px; margin: 0 auto; padding: 0 16px; }
 .btn--linkedin { background: var(--linkedin); }
 .btn--dark { background: var(--red); }
 
-/* ---------- further reading ---------- */
-.feature {
-  display: block; text-decoration: none; margin: 8px 0 16px; padding: 16px;
-  background: var(--teal); color: #fff; border-radius: 14px; border: 3px solid var(--ink); box-shadow: var(--shadow);
-}
-.feature-label { font-family: var(--display); color: var(--yellow); font-size: 18px; letter-spacing: 0.05em; }
-.feature strong { display: block; font-size: 21px; line-height: 1.2; margin: 4px 0 6px; }
-.feature-sub { font-size: 15px; opacity: 0.92; }
-
 /* ---------- about ---------- */
 .about { text-align: left; }
 .about-photo {
