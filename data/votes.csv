@@ -469,3 +469,104 @@ vote_id,timestamp_utc,robot,robot_label,country,region,city,event,source
 471,2026-11-21T01:19:24.698Z,blue,Blue Bomber (This AI tech is amazing),AU,New South Wales,Sydney,,web
 472,2026-11-25T11:01:31.964Z,red,Red Rocker (AI is too dangerous),RS,Central Serbia,Savski Venac,,test
 473,2026-11-25T11:19:37.478Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Savski Venac,,web
+474,2026-11-27T07:50:32.795Z,blue,Blue Bomber (This AI tech is amazing),AT,Vienna,Vienna,,web
+475,2026-11-27T08:05:48.734Z,red,Red Rocker (AI is too dangerous),RS,Central Serbia,Belgrade,,web
+476,2026-11-27T08:10:27.161Z,blue,Blue Bomber (This AI tech is amazing),ME,Podgorica,Podgorica,,web
+477,2026-11-27T08:11:14.751Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+478,2026-11-27T08:11:15.854Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+479,2026-11-27T08:22:13.359Z,red,Red Rocker (AI is too dangerous),RS,Central Serbia,Savski Venac,,web
+480,2026-11-27T08:24:27.976Z,blue,Blue Bomber (This AI tech is amazing),ME,Podgorica,Podgorica,,web
+481,2026-11-27T08:24:30.544Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Savski Venac,,web
+482,2026-11-27T08:24:30.608Z,red,Red Rocker (AI is too dangerous),RS,Central Serbia,Surčin,,web
+483,2026-11-27T08:24:31.099Z,red,Red Rocker (AI is too dangerous),RS,Central Serbia,Savski Venac,,web
+484,2026-11-27T08:24:33.076Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Niš,,web
+485,2026-11-27T08:24:33.920Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Savski Venac,,web
+486,2026-11-27T08:24:36.479Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Savski Venac,,web
+487,2026-11-27T08:24:37.038Z,red,Red Rocker (AI is too dangerous),RS,Central Serbia,Belgrade,,web
+488,2026-11-27T08:24:38.303Z,red,Red Rocker (AI is too dangerous),RS,Central Serbia,Savski Venac,,web
+489,2026-11-27T08:24:39.797Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+490,2026-11-27T08:24:39.910Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Savski Venac,,web
+491,2026-11-27T08:24:40.245Z,red,Red Rocker (AI is too dangerous),RS,Central Serbia,Savski Venac,,web
+492,2026-11-27T08:24:42.127Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Savski Venac,,web
+493,2026-11-27T08:24:42.792Z,red,Red Rocker (AI is too dangerous),RS,Central Serbia,Belgrade,,web
+494,2026-11-27T08:24:44.809Z,red,Red Rocker (AI is too dangerous),RS,Central Serbia,Belgrade,,web
+495,2026-11-27T08:24:45.801Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Savski Venac,,web
+496,2026-11-27T08:24:46.739Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Niš,,web
+497,2026-11-27T08:24:46.862Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+498,2026-11-27T08:24:47.824Z,blue,Blue Bomber (This AI tech is amazing),ME,Podgorica,Podgorica,,web
+499,2026-11-27T08:24:49.237Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+500,2026-11-27T08:24:49.407Z,red,Red Rocker (AI is too dangerous),RS,Central Serbia,Savski Venac,,web
+501,2026-11-27T08:24:50.135Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Savski Venac,,web
+502,2026-11-27T08:24:51.122Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Savski Venac,,web
+503,2026-11-27T08:24:51.983Z,red,Red Rocker (AI is too dangerous),RS,Central Serbia,Niš,,web
+504,2026-11-27T08:24:52.961Z,blue,Blue Bomber (This AI tech is amazing),RS,Vojvodina,Novi Sad,,web
+505,2026-11-27T08:24:53.264Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Savski Venac,,web
+506,2026-11-27T08:24:55.036Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Niš,,web
+507,2026-11-27T08:24:55.159Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+508,2026-11-27T08:24:57.150Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+509,2026-11-27T08:24:57.476Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+510,2026-11-27T08:24:58.947Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+511,2026-11-27T08:25:00.594Z,red,Red Rocker (AI is too dangerous),RS,Central Serbia,Niš,,web
+512,2026-11-27T08:25:03.050Z,red,Red Rocker (AI is too dangerous),RS,Central Serbia,Belgrade,,web
+513,2026-11-27T08:25:04.546Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+514,2026-11-27T08:25:07.078Z,red,Red Rocker (AI is too dangerous),RS,Central Serbia,Savski Venac,,web
+515,2026-11-27T08:25:08.327Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+516,2026-11-27T08:25:13.135Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Savski Venac,,web
+517,2026-11-27T08:25:14.178Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+518,2026-11-27T08:25:15.399Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+519,2026-11-27T08:25:15.753Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Niš,,web
+520,2026-11-27T08:25:21.372Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Savski Venac,,web
+521,2026-11-27T08:25:21.589Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+522,2026-11-27T08:25:23.203Z,red,Red Rocker (AI is too dangerous),RS,Central Serbia,Belgrade,,web
+523,2026-11-27T08:25:24.518Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+524,2026-11-27T08:25:26.686Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+525,2026-11-27T08:25:34.117Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+526,2026-11-27T08:25:41.755Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+527,2026-11-27T08:25:51.818Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+528,2026-11-27T08:26:20.801Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+529,2026-11-27T08:26:44.579Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+530,2026-11-27T08:27:03.649Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+531,2026-11-27T08:27:24.415Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+532,2026-11-27T08:27:41.234Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+533,2026-11-27T08:27:57.701Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+534,2026-11-27T08:28:12.702Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+535,2026-11-27T08:28:34.844Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+536,2026-11-27T08:29:39.161Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+537,2026-11-27T08:29:39.236Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+538,2026-11-27T08:29:50.071Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+539,2026-11-27T08:29:51.811Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+540,2026-11-27T08:29:56.446Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+541,2026-11-27T08:30:02.882Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+542,2026-11-27T08:30:05.532Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+543,2026-11-27T08:30:09.234Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+544,2026-11-27T08:30:18.425Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+545,2026-11-27T08:30:18.746Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+546,2026-11-27T08:30:25.406Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+547,2026-11-27T08:30:30.157Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+548,2026-11-27T08:30:35.553Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+549,2026-11-27T08:30:43.294Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+550,2026-11-27T08:30:43.831Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+551,2026-11-27T08:30:49.139Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+552,2026-11-27T08:30:54.786Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+553,2026-11-27T08:30:57.162Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+554,2026-11-27T08:31:01.179Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+555,2026-11-27T08:31:07.046Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+556,2026-11-27T08:31:09.564Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+557,2026-11-27T08:31:12.906Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+558,2026-11-27T08:31:19.069Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+559,2026-11-27T08:31:24.462Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+560,2026-11-27T08:31:30.451Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+561,2026-11-27T08:31:38.376Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+562,2026-11-27T08:31:43.962Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+563,2026-11-27T08:31:48.840Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+564,2026-11-27T08:31:51.796Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+565,2026-11-27T08:31:59.080Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+566,2026-11-27T08:32:01.241Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+567,2026-11-27T08:32:04.716Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+568,2026-11-27T08:32:11.247Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+569,2026-11-27T08:32:11.322Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+570,2026-11-27T08:33:43.617Z,red,Red Rocker (AI is too dangerous),RS,Central Serbia,Savski Venac,,web
+571,2026-11-27T08:35:43.359Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Belgrade,,web
+572,2026-11-27T08:36:44.999Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Savski Venac,,web
+573,2026-11-27T08:43:37.249Z,red,Red Rocker (AI is too dangerous),RS,Central Serbia,Savski Venac,,web
+574,2026-11-27T08:43:41.832Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Savski Venac,,web
