@@ -570,3 +570,8 @@ vote_id,timestamp_utc,robot,robot_label,country,region,city,event,source
 572,2026-11-27T08:36:44.999Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Savski Venac,,web
 573,2026-11-27T08:43:37.249Z,red,Red Rocker (AI is too dangerous),RS,Central Serbia,Savski Venac,,web
 574,2026-11-27T08:43:41.832Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Savski Venac,,web
+575,2026-11-27T08:55:32.815Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Savski Venac,,web
+576,2026-11-27T08:56:04.532Z,blue,Blue Bomber (This AI tech is amazing),NL,North Brabant,Eindhoven,dsc,web
+577,2026-11-27T08:56:23.987Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Savski Venac,dsc,web
+578,2026-11-27T08:56:54.775Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Savski Venac,dsc,web
+579,2026-11-27T08:58:14.930Z,blue,Blue Bomber (This AI tech is amazing),RS,Central Serbia,Savski Venac,,web
